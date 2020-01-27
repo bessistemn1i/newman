@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Montserrat";
+    font-display: swap;
+    src:url("./fonts/Montserrat/Montserrat-Regular.woff2") format("woff2"),
+        url("./fonts/Montserrat/Montserrat-Regular.woff") format("woff");
+
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-display: swap;
+    src:url("./fonts/Montserrat/Montserrat-Medium.woff2") format("woff2"),
+        url("./fonts/Montserrat/Montserrat-Medium.woff") format("woff");
+
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-display: swap;
+    src:url("./fonts/Montserrat/Montserrat-Bold.woff2") format("woff2"),
+        url("./fonts/Montserrat/Montserrat-Bold.woff") format("woff");
+
+    font-weight: 700;
+    font-style: normal;
+}
+
+.main-font {
+    // typography
+    color: #2C272E;
+    font-family: $baseFont;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.ghost-font {
+    // typography
+    color: #2C272E;
+    font-family: $baseFont;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 12px;
+    text-transform: uppercase;
+}
+
+.red-font {
+    color: #2C272E;
+    font-family: $baseFont;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 17px;
+    text-transform: uppercase;
+}
+
+.info-font {
+    color: #2C272E;
+    font-family: $baseFont;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.bold-font {
+    color: #2B2A29;
+    font-family: $baseFont;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.mainHeader-font {
+    color: #2C272E;
+    font-family: $baseFont;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}

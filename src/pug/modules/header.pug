@@ -1,0 +1,55 @@
+header.main-header
+    .main-header__top-navigation
+        .main-header__logo
+            img.logo(src="./img/logo/newman-logo.svg", alt="NEWMAN BARBERSHOP")
+        
+        .main-header__mobile-icon
+            .mobile-icon
+                .mobile-icon__line.mobile-icon__line-one
+                .mobile-icon__line.mobile-icon__line-two
+                .mobile-icon__line.mobile-icon__line-three
+        .main-header__nav
+            nav.main-nav
+                ul.main-nav__list
+                    li.main-nav__item
+                        a.main-nav__link(href="#price") Прайс
+                    li.main-nav__item
+                        a.main-nav__link(href="#services") Услуги
+                    li.main-nav__item
+                        a.main-nav__link(href="#contacts") Контакты
+    .main-header__content
+        .main-header__info
+            .section-header
+                p.section-header__text-top Born in norilsk
+                h1.section-header__title NEWMAN BARBERSHOP
+                p.section-header__subtitle Для настоящих ценителей мужского стиля
+            p.main-header__descr Мы больше чем просто парикмахерская, мы создаем современную класику мужских стрижек и бритья. NEWMAN NORILSK — место с твоим характером.
+            .main-header__buttons
+                button.btn.btn--active Запись онлайн
+                button.btn Контакты
+
+        .main-header__image-small
+            img(src="./img/promos/cutting.jpg", alt="Стрижка")
+        .main-header__image-big
+            img(src="./img/promos/shaving.jpg", alt="Бритье")
+
+    .main-header__contacts
+        .main-header__address
+            .main-header__address-header
+                h3.main-header__address-title Адресс
+            p.main-header__address-place <span class="main-header__address-city">Норильск</span> Ленинский проспект, 39д <span class="main-header__address-landmark">ТЦ "Салют"</span>
+        .main-header__working-hours
+            .main-header__working-hours-header
+                h3.main-header__working-hours-title Режим работы
+            .main-header__working-hours-block
+                p.main-header__working-hours-days Понедельник - Пятница
+                p.main-header__working-hours-time 09.00 - 22.00
+            .main-header__working-hours-block
+                p.main-header__working-hours-days Суббота - Воскресенье
+                p.main-header__working-hours-time 10.00 22.00
+
+    ul.social-aside
+        li.social__item
+            a.social__link(href="#") vkontakte
+        li.social__item
+            a.social__link(href="#") instagram

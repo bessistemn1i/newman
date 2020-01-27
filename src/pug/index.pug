@@ -8,6 +8,239 @@ html(lang="ru")
     body
         include ./modules/header.pug
 
+        section.about#about
+            .about__content
+                .about__info
+                    header.section-header
+                        p.seciton-header__text-top About barbershop
+                        h1.section-header__title Профессиональный
+                        p.section-header__subtitle подход к стрижкам и бритью
+                    p.main-header__descr Мы не пытаемся выделяться вычурным интерьером,  главное для нас это качественные стрижки и довольные клиенты для которых мы готовы выкладыватьс по полной каждый день. 
+                    p.main-header__descr--stress Неповторимая классика мужского стиля и профессионализм — вот наши главные приоритеты в работе.
+                    .main-header__buttons
+                        button.btn Подробнее об услугах
+                .about__image
+                    img.about-img(src="./img/bg/team-bg.jpg", alt="О компании Newman")
+        
+                section.features#features
+                    header.features__header
+                        h3.features__title Преимущества барбершопа <span class="features__title--stress">Newman</span>
+                    .features__content
+                        .feature
+                            header.feature__header
+                                p.feature__subtitle Атмосфера
+                                h3.feature__title Для настоящих мужчин
+                            .feature__descr
+                                p.feature__text Территория стиля и брутальности, место где вы почувствуете настоящую атмосферу мужского барбершопа
+                            .feature__mark
+                                img.feature__image-mark(src="./img/icons/for-men.svg", alt="Для настоящих мужчин")
+                                button.btn.btn--active Наши услуги
+                        .feature
+                            header.feature__header
+                                p.feature__subtitle Опыт и навыки
+                                h3.feature__title Команда профессионалов
+                            .feature__descr
+                                p.feature__text Опытная барберы подберут при необходимости подходящий именно вам стиль стрижки и оформления бороды, подчеркивающий вашу индивидальность и статус.
+                            .feature__mark
+                                img.feature__image-mark(src="./img/icons/for-men.svg", alt="Команда профессионалов")
+                                button.btn.btn--active Наши услуги
+                        .feature
+                            header.feature__header
+                                p.feature__subtitle Оборудование
+                                h3.feature__title Качественное борудование
+                            .feature__descr
+                                p.feature__text Мы работаетм только с официальными компаниями поставщиками профессионального обордования 
+                            .feature__mark
+                                img.feature__image-mark(src="./img/icons/blade.svg", alt="Качественное борудование")
+                                button.btn.btn--active Наши услуги
+                        .feature
+                            header.feature__header
+                                p.feature__subtitle Удобство и комфорт
+                                h3.feature__title Комфортный сервис
+                            .feature__descr
+                                p.feature__text Мы уделяем внимание даже самым мелочам, воспользуйтесь возможностью оформить он-лайн запись прямо на нашем сайте
+                            .feature__mark
+                                img.feature__image-mark(src="./img/icons/shild.svg", alt="Комфортный сервис")
+                                button.btn.btn--active Наши услуги
+        
+            ul.social-aside
+                li.social__item
+                    a.social__link(href="#") vkontakte
+                li.social__item
+                    a.social__link(href="#") instagram
+        
+        section.price#price
+            .price__content
+                header.section-header
+                    p.seciton-header__text-top Price list
+                    h1.section-header__title Прайс-лист
+                    p.section-header__subtitle на услуги
+                .price__content-descr
+                    header.price__content-descr-header
+                        .price__content-descr-title Персональный подход
+                    p.price__content-dscr-text Не беспокойтесь если не знаете какую прическу или услугу вам выбрать. Наши барберы подберут подходящий вам стиль, соотвествующий вашей индивидуальности
+                    button.btn.btn--active Запись онлайн
+            .price__table
+                table.price-table
+                    thead
+                        tr
+                            th.price-table__service Стрижки и уход
+                            th.price-table__price руб. Р
+                    tbody
+                        tr
+                            td.price-table__service Стрижка мужская <span class="price-table__service-descr">Подбор стиля, мытьё головы</span>
+                            td.price-table__price 1200
+                        tr
+                            td.price-table__service Стрижка детская <span class="price-table__service-descr">с 3 до 11 лет</span>
+                            td.price-table__price 1100
+                        tr
+                            td.price-table__service Стрижка под машинку
+                            td.price-table__price 1200
+                        tr
+                            td.price-table__service Мытье головы и укладка
+                            td.price-table__price 800
+                        tr
+                            td.price-table__service Камуфляж головы
+                            td.price-table__price 600
+                        tr
+                            td.price-table__service Камуфляж бороды
+                            td.price-table__price 600
+                table.price-table
+                    thead
+                        tr
+                            th.price-table__service Бритье
+                    tbody
+                        tr
+                            td.price-table__service Опасное бритье лица
+                            td.price-table__price 600
+                        tr
+                            td.price-table__service Опасное бритье головы
+                            td.price-table__price 800
+                        tr
+                            td.price-table__service Оформление бороды/усов
+                            td.price-table__price 400
+                        tr
+                            td.price-table__service Окантовка
+                            td.price-table__price 500
+                table.table-price
+                    thead
+                        tr
+                            th.price-table__service Комплексные услуги
+                    tbody
+                        tr
+                            td.price-table__service Папа+Сын
+                            td.price-table__price 1800
+                        tr
+                            td.price-table__service Мужская стрижка+Оформление бороды
+                            td.price-table__price 1800
+        
+            ul.social-aside
+                li.social__item
+                    a.social__link(href="#") vkontakte
+                li.social__item
+                    a.social__link(href="#") instagram
+
+        section.discount#discount
+            .discount__content
+                header.section-header
+                    p.seciton-header__text-top Discount
+                    h1.section-header__title Скидки и акции
+                    p.section-header__subtitle для наших новых и постоянных клиентов
+                
+                .discount__slider
+                    .slider-discount
+                        .slider-discount__item
+                            .discount-card
+                                header.discount-card__header
+                                    h3.discount-card__title -30%
+                                    p.discount-card__subtitle Комплекс Отец + Сын
+                                p.discount-card__descr Две стрижки у одного мастера со скидкой 30%
+                            .discount__buttons
+                                button.btn.btn--active Запись онлайн
+                        .slider-discount__item
+                            .discount-card
+                                header.discount-card__header
+                                    h3.discount-card__title 2100 &#8381;
+                                    p.discount-card__subtitle Королевское бритье
+                                p.discount-card__descr Скидка на услугу при первом посещении
+                            .discount__buttons
+                                button.btn.btn--active Запись онлайн
+                        .slider-discount__item
+                            .discount-card
+                                header.discount-card__header
+                                    h3.discount-card__title -25%
+                                    p.discount-card__subtitle Комплекс Друг + друг
+                                p.discount-card__descr Две стрижки у одного мастера со скидкой 30%
+                            .discount__buttons
+                                button.btn.btn--active Запись онлайн
+
+            ul.social-aside
+                li.social__item
+                    a.social__link(href="#") vkontakte
+                li.social__item
+                    a.social__link(href="#") instagram
+
+        section.services#services
+            .services__content
+                header.section-header
+                    p.seciton-header__text-top Our services
+                    h1.section-header__title Услуги
+                    p.section-header__subtitle барбершопа
+                    ul.services__tabs
+                        li.services__tabs-item#tab-cut
+                            button.services__tabs-btn <span class="services__tabs-btn">Стрижки</span> Мужские стрижки
+                        li.services__tabs-item#tab-care
+                            button.services__tabs-btn <span class="services__tabs-btn">Уход</span> Стрижки усов и бороды
+                        li.services__tabs-item#tab-shaving
+                            button.services__tabs-btn <span class="services__tabs-btn">Бритье</span> Бритье бороды и головы
+                        li.services__tabs-item#tab-king-shaving
+                            button.services__tabs-btn <span class="services__tabs-btn">Бритье</span> Королевское бритье
+                .services__tab-container
+                    .services__tab(data-tab="tab-cut")
+                        .services__tab-bg
+                            img.services__tab-bg-img(src="./img/services/moustache-cut.jpg", alt="Только качественное оборудование и мастерство барберов")
+                        .services__tab-info
+                            header.services__tab-header
+                                h4.services__tab-title Только качественное оборудование и мастерство барберов
+                            .services__tab-text-content
+                                p.services__tab-text Содержать бороду и усы в идеальном состоянии так же важно как и уметь подбирать одежду для важных мероприятий. Эти мелочи могут дополнить ваш стиль и придать ему соотвествующий раскошный вид.
+                                a.services__tab-link(href="#services") Наши услуги
+                    .services__tab(data-tab="tab-care")
+                        .services__tab-bg
+                            img.services__tab-bg-img(src="./img/services/moustache-cut.jpg", alt="Только качественное оборудование и мастерство барберов")
+                        .services__tab-info
+                            header.services__tab-header
+                                h4.services__tab-title Только качественное оборудование и мастерство барберов
+                            .services__tab-text-content
+                                p.services__tab-text Содержать бороду и усы в идеальном состоянии так же важно как и уметь подбирать одежду для важных мероприятий. Эти мелочи могут дополнить ваш стиль и придать ему соотвествующий раскошный вид.
+                                a.services__tab-link(href="#services") Наши услуги
+                    .services__tab(data-tab="tab-shaving")
+                        .services__tab-bg
+                            img.services__tab-bg-img(src="./img/services/moustache-cut.jpg", alt="Только качественное оборудование и мастерство барберов")
+                        .services__tab-info
+                            header.services__tab-header
+                                h4.services__tab-title Только качественное оборудование и мастерство барберов
+                            .services__tab-text-content
+                                p.services__tab-text Содержать бороду и усы в идеальном состоянии так же важно как и уметь подбирать одежду для важных мероприятий. Эти мелочи могут дополнить ваш стиль и придать ему соотвествующий раскошный вид.
+                                a.services__tab-link(href="#services") Наши услуги
+                    .services__tab(data-tab="tab-king-shaving")
+                        .services__tab-bg
+                            img.services__tab-bg-img(src="./img/services/moustache-cut.jpg", alt="Только качественное оборудование и мастерство барберов")
+                        .services__tab-info
+                            header.services__tab-header
+                                h4.services__tab-title Только качественное оборудование и мастерство барберов
+                            .services__tab-text-content
+                                p.services__tab-text Содержать бороду и усы в идеальном состоянии так же важно как и уметь подбирать одежду для важных мероприятий. Эти мелочи могут дополнить ваш стиль и придать ему соотвествующий раскошный вид.
+                                a.services__tab-link(href="#services") Наши услуги
+            ul.social-aside
+                li.social__item
+                    a.social__link(href="#") vkontakte
+                li.social__item
+                    a.social__link(href="#") instagram
+
+        section.team#team
+            .team__content
+
         include ./modules/footer.pug
 
         scripts.js
