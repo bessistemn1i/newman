@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Newman barbershop</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -43,23 +44,25 @@
             <div class="main-header__image-big"><img src="./img/promos/shaving.jpg" alt="Бритье" /></div>
         </div>
         <div class="main-header__contacts">
-            <div class="main-header__address">
-                <div class="main-header__address-header">
-                    <h3 class="main-header__address-title">Адресс</h3>
+            <div class="contacts">
+                <div class="contacts__address">
+                    <div class="contacts__address-header">
+                        <h3 class="contacts__address-title">Адресс</h3>
+                    </div>
+                    <p class="contacts__address-place"><span class="contacts__address-city">Норильск</span> Ленинский проспект, 39д <span class="contacts__address-landmark">ТЦ "Салют"</span></p>
                 </div>
-                <p class="main-header__address-place"><span class="main-header__address-city">Норильск</span> Ленинский проспект, 39д <span class="main-header__address-landmark">ТЦ "Салют"</span></p>
-            </div>
-            <div class="main-header__working-hours">
-                <div class="main-header__working-hours-header">
-                    <h3 class="main-header__working-hours-title">Режим работы</h3>
-                </div>
-                <div class="main-header__working-hours-block">
-                    <p class="main-header__working-hours-days">Понедельник - Пятница</p>
-                    <p class="main-header__working-hours-time">09.00 - 22.00</p>
-                </div>
-                <div class="main-header__working-hours-block">
-                    <p class="main-header__working-hours-days">Суббота - Воскресенье</p>
-                    <p class="main-header__working-hours-time">10.00 22.00</p>
+                <div class="contacts__working-hours">
+                    <div class="contacts__working-hours-header">
+                        <h3 class="contacts__working-hours-title">Режим работы</h3>
+                    </div>
+                    <div class="contacts__working-hours-block">
+                        <p class="contacts__working-hours-days">Понедельник - Пятница</p>
+                        <p class="contacts__working-hours-time">09.00 - 22.00</p>
+                    </div>
+                    <div class="contacts__working-hours-block">
+                        <p class="contacts__working-hours-days">Суббота - Воскресенье</p>
+                        <p class="contacts__working-hours-time">10.00 22.00</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -104,7 +107,7 @@
                         <div class="feature__descr">
                             <p class="feature__text">Опытная барберы подберут при необходимости подходящий именно вам стиль стрижки и оформления бороды, подчеркивающий вашу индивидальность и статус.</p>
                         </div>
-                        <div class="feature__mark"><img class="feature__image-mark" src="./img/icons/for-men.svg" alt="Команда профессионалов" /><button class="btn btn--active">Наши услуги</button></div>
+                        <div class="feature__mark"><img class="feature__image-mark" src="./img/icons/quality.svg" alt="Команда профессионалов" /><button class="btn btn--active">Наши услуги</button></div>
                     </div>
                     <div class="feature">
                         <header class="feature__header">
@@ -344,36 +347,134 @@
         </ul>
     </section>
     <section class="team" id="team">
-        <div class="team__content"></div>
+        <div class="team__content">
+            <header class="section-header">
+                <p class="seciton-header__text-top">Our team</p>
+                <h3 class="section-header__title">Барберы</h3>
+                <p class="section-header__subtitle">наша команда</p>
+                <div class="section-header--full">
+                    <h4 class="section-header--full-title">В нашем барбершопе работают настоящие мастера своего дела</h4>
+                    <p class="section-header--full-subtitle">Которые совмещают классический подход к стрижкам и современные трендовые стили</p>
+                </div>
+            </header>
+            <div class="team__list">
+                <div class="barber-card">
+                    <div class="barber-card__image"><img class="barber-card__img" src="./img/masters.1jpg" alt="Master 1" /></div>
+                    <div class="barber-card__logo"><img class="barber-card__logo-img" src="./img/logo/newman-logo-icon.svg" alt="Newman барбершоп" /></div>
+                    <div class="barber-card__info">
+                        <h4 class="barber-card__title">Юрий</h4>
+                        <p class="barber-card__subtitle">Барбер</p>
+                    </div>
+                </div>
+                <div class="barber-card">
+                    <div class="barber-card__image"><img class="barber-card__img" src="./img/masters.2jpg" alt="Master 2" /></div>
+                    <div class="barber-card__logo"><img class="barber-card__logo-img" src="" alt="" /></div>
+                    <div class="barber-card__info">
+                        <h4 class="barber-card__title">Олег</h4>
+                        <p class="barber-card__subtitle">Барбер</p>
+                    </div>
+                </div>
+                <div class="barber-card">
+                    <div class="barber-card__image"><img class="barber-card__img" src="./img/masters.3jpg" alt="Master 3" /></div>
+                    <div class="barber-card__logo"><img class="barber-card__logo-img" src="" alt="" /></div>
+                    <div class="barber-card__info">
+                        <h4 class="barber-card__title">Денис</h4>
+                        <p class="barber-card__subtitle">Барбер</p>
+                    </div>
+                </div>
+                <div class="barber-card">
+                    <div class="barber-card__image"><img class="barber-card__img" src="./img/masters.1jpg" alt="Master 1" /></div>
+                    <div class="barber-card__logo"><img class="barber-card__logo-img" src="" alt="" /></div>
+                    <div class="barber-card__info">
+                        <h4 class="barber-card__title">Олег</h4>
+                        <p class="barber-card__subtitle">Барбер</p>
+                    </div>
+                </div>
+                <div class="barber-card">
+                    <div class="barber-card__image"><img class="barber-card__img" src="./img/masters.2jpg" alt="Master 2" /></div>
+                    <div class="barber-card__logo"><img class="barber-card__logo-img" src="" alt="" /></div>
+                    <div class="barber-card__info">
+                        <h4 class="barber-card__title">Денис</h4>
+                        <p class="barber-card__subtitle">Барбер</p>
+                    </div>
+                </div>
+                <div class="barber-card">
+                    <div class="barber-card__image"><img class="barber-card__img" src="./img/masters.3jpg" alt="Master 3" /></div>
+                    <div class="barber-card__logo"><img class="barber-card__logo-img" src="" alt="" /></div>
+                    <div class="barber-card__info">
+                        <h4 class="barber-card__title">Юрий</h4>
+                        <p class="barber-card__subtitle">Барбер</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="social-aside">
+            <li class="social__item"><a class="social__link" href="#">vkontakte</a></li>
+            <li class="social__item"><a class="social__link" href="#">instagram</a></li>
+        </ul>
+    </section>
+    <section class="main-contacts" id="contacts">
+        <div class="main-contacts__content">
+            <header class="section-header">
+                <p class="seciton-header__text-top">Contacts</p>
+                <h3 class="section-header__title">Контакты</h3>
+                <p class="section-header__subtitle">Барбершопа</p>
+            </header>
+            <div class="main-contacts__info">
+                <div class="contacts">
+                    <div class="contacts__address">
+                        <div class="contacts__address-header">
+                            <h3 class="contacts__address-title">Адресс</h3>
+                        </div>
+                        <p class="contacts__address-place"><span class="contacts__address-city">Норильск</span> Ленинский проспект, 39д <span class="contacts__address-landmark">ТЦ "Салют"</span></p>
+                    </div>
+                    <div class="contacts__working-hours">
+                        <div class="contacts__working-hours-header">
+                            <h3 class="contacts__working-hours-title">Режим работы</h3>
+                        </div>
+                        <div class="contacts__working-hours-block">
+                            <p class="contacts__working-hours-days">Понедельник - Пятница</p>
+                            <p class="contacts__working-hours-time">09.00 - 22.00</p>
+                        </div>
+                        <div class="contacts__working-hours-block">
+                            <p class="contacts__working-hours-days">Суббота - Воскресенье</p>
+                            <p class="contacts__working-hours-time">10.00 22.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <footer class="main-footer">
         <div class="main-footer__content">
             <div class="main-footer__info">
                 <div class="main-footer__info-logo"><img class="logo" src="./img/logo/newman-logo.svg" alt="NEWMAN BARBERSHOP" /></div>
-                <p class="main-footer__info-descr">Барбершоп для настоящих ценителей современного мужского стиля</p>
+                <p class="bold-font">Барбершоп для настоящих ценителей современного мужского стиля</p>
             </div>
-            <div class="main-footer__menu">
-                <div class="main-footer__menu-header">
-                    <h4 class="main-footer__menu-title">Меню</h4>
+            <div class="main-footer__menu-and-social">
+                <div class="main-footer__menu">
+                    <div class="main-footer__menu-header">
+                        <h4 class="main-footer__menu-title ghost-font ghost-font--red">Меню</h4>
+                    </div>
+                    <ul class="main-footer__menu-list">
+                        <li class="main-footer__menu-item"><a class="main-footer__menu-link" href="#about">О барбершопе</a></li>
+                        <li class="main-footer__menu-item"><a class="main-footer__menu-link" href="#features">Преимущества</a></li>
+                        <li class="main-footer__menu-item"><a class="main-footer__menu-link" href="#price">Прайс</a></li>
+                        <li class="main-footer__menu-item"><a class="main-footer__menu-link" href="#services">Услуги</a></li>
+                        <li class="main-footer__menu-item"><a class="main-footer__menu-link" href="#team">Команда</a></li>
+                        <li class="main-footer__menu-item"><a class="main-footer__menu-link" href="#contacts">Контакты</a></li>
+                    </ul>
                 </div>
-                <ul class="main-footer__menu-list">
-                    <li class="main-footer__menu-item"><a class="main-footer__menu-link" href="#about">О барбершопе</a></li>
-                    <li class="main-footer__menu-item"><a class="main-footer__menu-link" href="#features">Преимущества</a></li>
-                    <li class="main-footer__menu-item"><a class="main-footer__menu-link" href="#price">Прайс</a></li>
-                    <li class="main-footer__menu-item"><a class="main-footer__menu-link" href="#services">Услуги</a></li>
-                    <li class="main-footer__menu-item"><a class="main-footer__menu-link" href="#team">Команда</a></li>
-                    <li class="main-footer__menu-item"><a class="main-footer__menu-link" href="#contacts">Контакты</a></li>
-                </ul>
-            </div>
-            <div class="main__footer-social">
-                <div class="main__footer-social-header">
-                    <h4 class="main__footer-social-title">Мы в социальных сетях</h4>
+                <div class="main-footer__social">
+                    <div class="main__footer-social-header">
+                        <h4 class="main__footer-social-title">Мы в социальных сетях</h4>
+                    </div>
+                    <ul class="main__footer-social-list">
+                        <li class="main__footer-social-item"><a class="main__footer-social-link" href="#">instagram</a></li>
+                        <li class="main__footer-social-item"><a class="main__footer-social-link" href="#">vkontakte</a></li>
+                    </ul>
+                    <div class="main__footer-policy"><a class="main__footer-policy-link" href="#">Условия использования</a><a class="main__footer-policy-link" href="#">Политика безопасности</a></div>
                 </div>
-                <ul class="main__footer-social-list">
-                    <li class="main__footer-social-item"><a class="main__footer-social-link" href="#">instagram</a></li>
-                    <li class="main__footer-social-item"><a class="main__footer-social-link" href="#">vkontakte</a></li>
-                </ul>
-                <div class="main__footer-policy"><a class="main__footer-policy-link" href="#">Условия использования</a><a class="main__footer-policy-link" href="#">Политика безопасности</a></div>
             </div>
         </div><button class="up-button" id="up-button">
             <div class="up-button__arrow"></div>
