@@ -13,7 +13,7 @@
 
 .main-footer__info-logo {
     // box model
-    margin-bottom: -20px;
+    width: 225px;
 }
 
 .main-footer__content {
@@ -32,6 +32,9 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 630px;
 }
 
 .main-footer__info {
@@ -47,15 +50,15 @@
     flex-basis: 230px;
     flex-grow: 1;
     flex-shrink: 0;
-    max-width: 230px;
+    max-width: 100%;
 }
 
 .main-footer__social {
     // box model
-    flex-basis: 415px;
+    flex-basis: 310px;
     flex-grow: 1;
     flex-shrink: 0;
-    max-width: 415px;
+    max-width: 310px;
 }
 
 .main-footer__menu-header {
@@ -68,11 +71,105 @@
     margin: 0;
     padding: 0;
     columns: 2;
+    column-gap: 60px;
 
     // visual
     list-style: none;
 }
 
 .main-footer__menu-item {
-    
+    // box model
+    margin: 12.5px 0;
+
+    &:first-child {
+        // box model
+        margin-top: 0;
+    }
+}
+
+.main-footer__menu-link {
+    // box model
+    display: block;
+
+    // typography
+    color: $black;       
+    font-family: $baseFont;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+
+    // visual
+    text-decoration: none;
+}
+
+.main__footer-social-list {
+    // box model
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 33px;
+    padding: 0;
+    width: 100%;
+    max-width: 232px;
+
+    // visual
+    list-style: none;
+}
+
+.main__footer-social-header {
+    // box model
+    margin-bottom: 15px;
+}
+
+.main__footer-social-title {
+    // box model
+    margin: 0;
+}
+
+.main__footer-social-link {
+    // box model
+    display: block;
+
+    // visual
+    text-decoration: none;
+}
+
+.main__footer-policy {
+    // box model
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &:before {
+        content: "";
+
+        // box model
+        display: block;
+        margin-bottom: 12px;
+        width: 100%;
+        height: 1px;
+
+        // visual
+        background-color: rgba($grey, 0.5);
+    }
+}
+
+.main__footer-policy-link {
+    // box model
+    display: block;
+    margin-bottom: 7px;
+
+    // typography
+    color: $grey;
+    font-family: $baseFont;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-decoration: none;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
