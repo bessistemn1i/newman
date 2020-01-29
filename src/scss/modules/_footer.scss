@@ -9,6 +9,7 @@
     max-width: 1430px;
     margin-right: auto;
     margin-left: auto;
+    padding-bottom: 30px;
 }
 
 .main-footer__info-logo {
@@ -20,6 +21,7 @@
     // box model
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1170px;
     width: 100%;
@@ -64,6 +66,11 @@
 .main-footer__menu-header {
     // box model
     margin-bottom: 16px;
+}
+
+.main-footer__menu-title {
+    // box model
+    margin: 0;
 }
 
 .main-footer__menu-list {
@@ -172,4 +179,16 @@
     &:last-child {
         margin-bottom: 0;
     }
+}
+
+.main-footer__policy-bottom-text {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $grey;
+    font-family: $baseFont;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
 }
