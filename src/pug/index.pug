@@ -13,7 +13,7 @@ html(lang="ru")
             .about__content
                 .about__info
                     header.section-header
-                        p.seciton-header__text-top About barbershop
+                        p.section-header__text-top About barbershop
                         h1.section-header__title Профессиональный
                         p.section-header__subtitle подход к стрижкам и бритью
                     p.main-header__descr Мы не пытаемся выделяться вычурным интерьером,  главное для нас это качественные стрижки и довольные клиенты для которых мы готовы выкладыватьс по полной каждый день. 
@@ -64,16 +64,10 @@ html(lang="ru")
                                 img.feature__image-mark(src="./img/icons/shild.svg", alt="Комфортный сервис")
                                 button.btn.btn--active Наши услуги
         
-            ul.social-aside
-                li.social__item
-                    a.social__link(href="#") vkontakte
-                li.social__item
-                    a.social__link(href="#") instagram
-        
         section.price#price
             .price__content
                 header.section-header
-                    p.seciton-header__text-top Price list
+                    p.section-header__text-top Price list
                     h1.section-header__title Прайс-лист
                     p.section-header__subtitle на услуги
                 .price__content-descr
@@ -134,17 +128,11 @@ html(lang="ru")
                         tr
                             td.price-table__service Мужская стрижка+Оформление бороды
                             td.price-table__price 1800
-        
-            ul.social-aside
-                li.social__item
-                    a.social__link(href="#") vkontakte
-                li.social__item
-                    a.social__link(href="#") instagram
 
         section.discount#discount
             .discount__content
                 header.section-header
-                    p.seciton-header__text-top Discount
+                    p.section-header__text-top Discount
                     h1.section-header__title Скидки и акции
                     p.section-header__subtitle для наших новых и постоянных клиентов
                 
@@ -175,16 +163,10 @@ html(lang="ru")
                             .discount__buttons
                                 button.btn.btn--active Запись онлайн
 
-            ul.social-aside
-                li.social__item
-                    a.social__link(href="#") vkontakte
-                li.social__item
-                    a.social__link(href="#") instagram
-
         section.services#services
             .services__content
                 header.section-header
-                    p.seciton-header__text-top Our services
+                    p.section-header__text-top Our services
                     h1.section-header__title Услуги
                     p.section-header__subtitle барбершопа
                     ul.services__tabs
@@ -233,16 +215,11 @@ html(lang="ru")
                             .services__tab-text-content
                                 p.services__tab-text Содержать бороду и усы в идеальном состоянии так же важно как и уметь подбирать одежду для важных мероприятий. Эти мелочи могут дополнить ваш стиль и придать ему соотвествующий раскошный вид.
                                 a.services__tab-link(href="#services") Наши услуги
-            ul.social-aside
-                li.social__item
-                    a.social__link(href="#") vkontakte
-                li.social__item
-                    a.social__link(href="#") instagram
 
         section.team#team
             .team__content
                 header.section-header
-                    p.seciton-header__text-top Our team
+                    p.section-header__text-top Our team
                     h3.section-header__title Барберы
                     p.section-header__subtitle наша команда
                     .section-header--full
@@ -297,16 +274,11 @@ html(lang="ru")
                         .barber-card__info
                             h4.barber-card__title Юрий
                             p.barber-card__subtitle Барбер
-            ul.social-aside
-                li.social__item
-                    a.social__link(href="#") vkontakte
-                li.social__item
-                    a.social__link(href="#") instagram
 
         section.main-contacts#contacts
             .main-contacts__content
                 header.section-header
-                    p.seciton-header__text-top Contacts
+                    p.section-header__text-top Contacts
                     h3.section-header__title Контакты
                     p.section-header__subtitle Барбершопа
                 .main-contacts__info
@@ -326,5 +298,11 @@ html(lang="ru")
                                 p.contacts__working-hours-time 10.00 22.00
 
         include ./modules/footer.pug
-
+        
+        ul.social-aside
+            li.social__item
+                a.social__link(href="#") vkontakte
+            li.social__item
+                a.social__link(href="#") instagram
+        
         script(src="main.js")

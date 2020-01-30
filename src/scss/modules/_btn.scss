@@ -1,0 +1,31 @@
+.btn {
+    // box model
+    width: 100%;
+    max-width: 200px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+
+    // typography
+    color: $grey;
+    font-family: $baseFont;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    text-transform: uppercase;
+
+    // visual
+    background-color: none;
+    border: 1px solid $grey;
+    opacity: 0.5;
+
+    &--active {
+        // typography
+        color: $white;
+        
+        // visual
+        background-color: $red;
+        border: 1px solid $red;
+        box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,32 @@
+.main-nav {
+    // box model
+    width: 100%;
+}
+
+.main-nav__list {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    // visual
+    list-style: none;
+}
+
+.main-nav__link {
+    // box model
+    display: block;
+
+    // typography
+    color: $black;
+    font-family: $baseFont;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    text-transform: uppercase;
+
+    // visual
+    text-decoration: none;
+}
