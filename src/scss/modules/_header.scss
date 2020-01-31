@@ -1,12 +1,17 @@
 .main-header {
     // box model
-    max-width: 1430px;
+    max-width: 1600px;
     margin-right: auto;
     margin-left: auto;
     padding-top: 40px;
+    margin-bottom: 160px;
 }
 
 .main-header__top-navigation {
+    // positioning
+    position: relative;
+    z-index: 4;
+
     // box model
     display: flex;
     flex-direction: row;
@@ -24,7 +29,9 @@
 
 .main-header__mobile-icon {
     // positioning
-    position: absolute;
+    position: fixed;
+    right: 320px;
+    top: 55px;
 }
 
 .main-header__nav {
@@ -36,11 +43,54 @@
 }
 
 .main-header__content {
+    // positioning
+    position: relative;
+
     // box model
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    max-width: 1520px;
+    margin-bottom: 35px;
+
+    &:before {
+        content: "";
+
+        // positioning
+        position: absolute;
+        right: 75px;
+        bottom: 0;
+
+        // box model
+        display: block;
+        width: 800px;
+        height: 800px;
+
+        // visual
+        background-image: url("./img/bg/body-bg.svg");
+    }
+
+    &:after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        right: 75px;
+        bottom: -20px;
+        z-index: 3;
+
+        // box model
+        display: block;
+        width: 800px;
+        height: 800px;
+
+        // visual
+        background-image: url("./img/decor/stamp.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        mix-blend-mode: overlay;
+    }
 }
 
 .main-header__info {
@@ -72,6 +122,10 @@
     }
 }
 
+.main-header__images {
+    
+}
+
 .main-header__descr {
     // box model
     margin-top: 37px;
@@ -86,12 +140,16 @@
 }
 
 .main-header__image-small {
+    // positioning
+    z-index: 3;
+
     // box model
     height: 656px;
     width: 416px;
 
     @include atDesktopM {
-        transform: translateY(-62px);
+        // box model
+        margin-top: -62px;
     }
 }
 
@@ -101,4 +159,79 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.main-header__image-big {
+    // positioning
+    position: relative;
+    z-index: 3;
+
+    // box model
+    height: 780px;
+    width: 440px;
+    
+    @include atDesktopM {
+        // box model
+        margin-top: -185px;
+    }
+
+    &:before {
+        content: "Барбершоп newman";
+
+        // positioning
+        position: absolute;
+        left: -120px;
+        bottom: 120px;
+        transform: rotate(270deg);
+
+        // typography
+        color: $grey;
+        font-family: $baseFont;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        line-height: 12px;
+        text-transform: uppercase;
+
+        // visual
+        opacity: 0.5;
+    }
+}
+
+.main-header__image-big img {
+    // box model
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-header__contacts {
+    // positioning
+    position: relative;
+
+    // box model
+    width: 100%;
+    max-width: 950px;
+
+    &:after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        right: calc(-100% + 345px);
+        bottom: -133px;
+        z-index: -1;
+
+        // box model
+        display: block;
+        width: 960px;
+        height: 295px;
+
+        // visual
+        background-image: url("./img/decor/decorative-brand.svg");
+        background-size: contain;
+        background-position: center center;
+        opacity: 0.8;
+    }
 }

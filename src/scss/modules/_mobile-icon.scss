@@ -1,0 +1,24 @@
+.mobile-icon {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 14px;
+
+    cursor: pointer;
+}
+
+.mobile-icon__line {
+    // box model
+    height: 2px;
+    width: 100%;
+
+    // visual
+    background-color: $white;
+
+    &--three {
+        // box model
+        width: 14px;
+    }
+}

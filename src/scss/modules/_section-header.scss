@@ -27,10 +27,15 @@
     // typography
     color: $black;
     font-family: $titleFont;
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
+
+    &--main-top {
+        // typography
+        font-size: 64px;
+    }
 }
 
 .section-header__subtitle {
@@ -45,4 +50,27 @@
     font-weight: 400;
     line-height: 54px;
     text-transform: uppercase;
+}
+
+.section-header__descr {
+    // box model
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    // typography
+    color: $black;
+    font-family: $baseFont;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    &--stress {
+        // box model
+        margin-top: 0;
+        margin-bottom: 40px;
+        
+        // typography
+        font-weight: 700;
+    }
 }

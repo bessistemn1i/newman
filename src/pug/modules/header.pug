@@ -5,9 +5,9 @@ header.main-header
         
         .main-header__mobile-icon
             .mobile-icon
-                .mobile-icon__line.mobile-icon__line-one
-                .mobile-icon__line.mobile-icon__line-two
-                .mobile-icon__line.mobile-icon__line-three
+                .mobile-icon__line.mobile-icon__line--one
+                .mobile-icon__line.mobile-icon__line--two
+                .mobile-icon__line.mobile-icon__line--three
         .main-header__nav
             nav.main-nav
                 ul.main-nav__list
@@ -21,30 +21,30 @@ header.main-header
         .main-header__info
             .section-header
                 p.section-header__text-top Born in norilsk
-                h1.section-header__title NEWMAN BARBERSHOP
+                h1.section-header__title.section-header__title--main-top NEWMAN BARBERSHOP
                 p.section-header__subtitle Для настоящих ценителей мужского стиля
             p.main-header__descr.main-font Мы больше чем просто парикмахерская, мы создаем современную класику мужских стрижек и бритья. NEWMAN NORILSK — место с твоим характером.
             .main-header__buttons
                 button.btn.btn--active Запись онлайн
                 button.btn Контакты
-
+        
         .main-header__image-small
             img(src="./img/promos/cutting.jpg", alt="Стрижка")
         .main-header__image-big
-            img(src="./img/promos/shaving.jpg", alt="Бритье")
+            img(src="./img/services/shaving-large.jpg", alt="Бритье")
 
     .main-header__contacts
         .contacts
             .contacts__address
                 .contacts__address-header
-                    h3.contacts__address-title Адресс
+                    h3.contacts__address-title.contacts__address-title--address Адрес
                 p.contacts__address-place <span class="contacts__address-city">Норильск</span> Ленинский проспект, 39д <span class="contacts__address-landmark">ТЦ "Салют"</span>
             .contacts__working-hours
                 .contacts__working-hours-header
-                    h3.contacts__working-hours-title Режим работы
+                    h3.contacts__working-hours-title.contacts__working-hours-title--hours Режим работы
                 .contacts__working-hours-block
                     p.contacts__working-hours-days Понедельник - Пятница
                     p.contacts__working-hours-time 09.00 - 22.00
                 .contacts__working-hours-block
                     p.contacts__working-hours-days Суббота - Воскресенье
-                    p.contacts__working-hours-time 10.00 22.00
+                    p.contacts__working-hours-time 10.00 - 22.00

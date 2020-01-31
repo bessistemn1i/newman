@@ -1,0 +1,142 @@
+.contacts {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contacts__address {
+    // box model
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.contacts__address-header,
+.contacts__working-hours-header {
+    // box model
+    margin-bottom: 9px;
+}
+
+.contacts__address-title,
+.contacts__working-hours-title {
+    // box model
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 175px;
+    margin: 0;
+    margin-right: 35px;
+
+    // typography
+    color: rgba($grey, 0.5);
+    font-family: $baseFont;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+
+    &:after {
+        content: "";
+
+        // box model
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+
+        // visual
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+.contacts__address-title--address {
+    &:after {
+        // visual
+        background-image: url("./img/icons/marker.svg");
+    }
+}
+
+.contacts__working-hours-title--hours {
+    &:after {
+        // visual
+        background-image: url("./img/icons/clock.svg");
+    }
+}
+
+.contacts__address-city,
+.contacts__working-hours-days {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $black;
+    font-family: $baseFont;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.contacts__address-city,
+.contacts__address-landmark {
+    // box model
+    display: block;
+}
+
+.contacts__address-landmark {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $grey;
+    font-family: $baseFont;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.contacts__address-place {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $black;
+    font-family: $baseFont;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.contacts__working-hours {
+    // box model
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 412px;
+    flex-wrap: wrap;
+}
+
+.contacts__working-hours-header {
+    // box model
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    max-width: 412;
+}
+
+.contacts__working-hours-time {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $black;
+    font-family: $baseFont;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 32px;
+}
