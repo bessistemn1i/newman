@@ -5,3 +5,139 @@
     flex-basis: 100%;
     max-width: 1300px;
 }
+
+.features__header {
+    // box model
+    width: 100%;
+    max-width: 740px;
+    margin-left: auto;
+    margin-bottom: 50px;
+}
+
+.features__title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $black;
+    font-family: $baseFont;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.features__title--stress {
+    // typography
+    text-transform: uppercase;
+}
+
+.features__content {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.features__item {
+    // positioning
+    position: relative;
+
+    // box model
+    width: 100%;
+    max-width: 280px;
+    margin: 0 15px;
+
+    // visual
+    background: none;
+    transition: all 0.25s ease;
+    cursor: pointer;
+
+    &:after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        top: 32px;
+        right: 25px;
+
+        // box model
+        display: block;
+        height: 64px;
+        width: 68px;
+
+        // visual
+        background-image: url('./img/logo/newman-logo-icon.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+
+    &:first-child {
+        // box model
+        margin-left: 0;
+    }
+
+    &:last-child {
+        // box model
+        margin-right: 30px;
+    }
+
+    &:hover {
+        // visual
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: initial;
+
+        .btn {
+            // positioning
+            position: absolute;
+            left: 35px;
+            bottom: 16px;
+
+            // typography
+            font-weight: 700;
+
+            // box model
+            display: block;
+            min-width: 270px;
+        }
+
+        .feature__image-mark {
+            // box model
+            display: none;
+        }
+
+        .feature__subtitle {
+            // typography
+            color: rgba($white, 0.5);
+        }
+
+        .feature__title,
+        .feature__text {
+            // typography
+            color: $white;
+        }
+
+        &:first-child {
+            // visual
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url("./img/promos/cutting.jpg");
+        }
+
+        &:last-child {
+            // visual
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url("./img/services/shaving-large.jpg");
+        }
+
+        &:nth-child(2) {
+            // visual
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url("./img/services/shaving-accessories.jpg");
+        }
+
+        &:nth-child(3) {
+            // visual
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url("./img/services/styling-man.jpg");
+        }
+    }
+}
