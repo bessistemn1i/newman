@@ -1,0 +1,46 @@
+.price {
+    // box model
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.price__content-full {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1440px;
+}
+
+.price__content-descr {
+    // box model
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: fill;
+    max-width: 580px;
+}
+
+.price__content-descr-header {
+
+}
+
+.price__content-descr-title {
+
+}
+
+.price__content-descr-text {
+
+}
+
+.price__table  {
+    // box model
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: fill;
+    max-width: 740px;
+}
