@@ -1,0 +1,76 @@
+.price-table {
+    // box model
+    width: 100%;
+    margin-bottom: 35px;
+    border-collapse: collapse;
+}
+
+.price-table__service {
+    // box model
+    padding: 0;
+    padding-bottom: 18px;
+    vertical-align: middle;
+
+    // typography
+    color: $grey;
+    text-align-last: left;
+}
+
+.price-table__price {
+    // box model
+    width: 100px;
+    padding: 0;
+    padding-bottom: 18px;
+
+    // typography
+    color: $black;
+    font-family: $baseFont;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+}
+
+.price-table__start-price {
+    // box model
+    margin-left: -1.5em;
+
+    // typography
+    font-size: 10px;
+}
+
+.price-table tbody .price-table__service {
+    // box model
+    vertical-align: middle;
+    padding: 3px 0;
+
+    // typography
+    color: $black;
+    font-family: $baseFont;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    
+}
+
+.price-table tbody .price-table__price {
+    // box model
+    padding: 3px 0;
+}
+
+.price-table tbody tr:hover {
+    // visual
+    background-color: rgba($grey, 0.1);
+}
+
+.price-table__service-descr {
+    // box model
+    margin-left: 15px;
+
+    // typography
+    color: $grey;
+    font-family: $baseFont;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+}
