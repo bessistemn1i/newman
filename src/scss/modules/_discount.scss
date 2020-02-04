@@ -1,0 +1,25 @@
+.discount {
+    // box model
+    width: 100%;
+}
+
+.discount__content {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1753px;
+}
+
+.discount__content .section-header {
+    // box model
+    max-width: 575px;
+    padding-left: 160px;
+}
+
+.discount__slider {
+    // box model
+    width: 100%;
+    max-width: 1035px;
+}
