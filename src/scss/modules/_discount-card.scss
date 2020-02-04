@@ -1,0 +1,109 @@
+.discount-card {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 415px;
+    height: 100%;
+    padding: 35px;
+    max-width: 308px;
+    width: 100%;
+
+    // typography
+    color: rgba($grey, 0.4);
+
+    // visual
+    background-image: url("/img/bg/body-bg.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &:after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        right: 25px;
+        top: 50px;
+        height: 43px;
+        width: 45px;
+
+        // visual
+        background-image: url("./img/logo/newman-logo-icon.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+    &--complex {
+        // typography
+        color: $white;
+
+        // visual
+        background-image: url("./img/services/shaving-large.jpg");
+    }
+
+    &--king {
+        // typography
+        color: $white;
+
+        // visual
+        background-image: url("./img/services/styling-man.jpg");
+    }
+}
+
+.discount-card__header {
+    // box model
+    margin-bottom: 30px;
+}
+
+.discount-card__title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: inherit;
+    font-family: $baseFont;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1;
+}
+
+.discount-card__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: inherit;
+    font-family: $baseFont;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.discount-card__descr {
+    // box model
+    margin: 0;
+
+    // typography
+    color: inherit;
+    font-family: $baseFont;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.discount-card__buttons {
+    // positioning
+    position: absolute;
+    bottom: 15px;
+    right: -15px;
+}
+
+.discount-card__buttons .btn--active {
+    // box model
+    width: 280px;
+}

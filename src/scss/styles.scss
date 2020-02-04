@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+//tiny-slider
+@import "../../node_modules/tiny-slider/src/tiny-slider.scss";
+
 // base
 @import "base/normalize";
 @import "base/vars";
@@ -22,7 +25,8 @@
 @import "modules/mobile-icon";
 @import "modules/feature";
 @import "modules/price-table";
-
+@import "modules/discount-card";
+@import "modules/slider-discount";
 
 // sections
 
