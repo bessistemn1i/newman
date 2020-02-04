@@ -18,7 +18,7 @@
 
 .price-table__price {
     // box model
-    width: 100px;
+    width: auto;
     padding: 0;
     padding-bottom: 18px;
 
@@ -28,7 +28,7 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
-    text-align: left;
+    text-align: right;
 }
 
 .price-table__start-price {

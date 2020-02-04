@@ -14,7 +14,7 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 1440px;
+    max-width: 1300px;
 }
 
 .price__content {
@@ -28,6 +28,25 @@
     max-width: 265px;
     padding-top: 0;
     padding-bottom: 100px;
+
+    &:before {
+        content: "Наши услуги и цены";
+
+        // positioning
+        position: absolute;
+        transform: rotate(270deg);
+        bottom: 145px;
+        right: -270px;
+
+        // typography
+        color: rgba($grey, 0.5);
+        font-family: $baseFont;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 12px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+    }
 
     &:after {
         content: "";
