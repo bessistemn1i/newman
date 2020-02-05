@@ -1,0 +1,264 @@
+.services {
+    // box model
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.services__content {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1400px;
+
+}
+
+.services__content .section-header {
+    // box model
+    max-width: 400px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100%;
+}
+
+.services__tabs {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+
+    // visual
+    list-style: none;
+}
+
+.services__tabs-btn {
+    // positioning
+    position: relative;
+
+    // box model
+    padding: 0;
+
+    // typography
+    color: rgba($black, 0.5);
+    font-family: $baseFont;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+
+    // visual
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.services__tabs-btn-upper-text {
+    // box model
+    display: block;
+    margin: 0;
+
+    // typography
+    color: rgba($grey, 0.5);
+    font-family: $baseFont;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+}
+
+.services__tabs-item {
+    // box model
+    margin-bottom: 10px;
+
+    &:last-child {
+        // box model
+        margin-bottom: 0;
+    }
+
+    &:hover,
+    &--active {
+        .services__tabs-btn {
+            // typography
+            color: $black;
+
+            &:before {
+                content: "";
+
+                // positioning
+                position: absolute;
+                left: -20px;
+                top: 50%;
+
+                // box model
+                display: block;
+                height: 12px;
+                width: 8px;
+                margin-top: 9px;
+
+                // visual
+                background-image: url("./img/icons/chevron-right.svg");
+
+            }
+        }
+    }
+}
+
+.services__tab-container {
+    // box model
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-width: 860px;
+}
+
+.services__tab {
+    // positioning
+    position: relative;
+    
+    // box model
+    display: none;
+}
+
+.services__tab-bg {
+    // positioning
+    position: relative;
+    z-index: -1;
+
+    // box model
+    max-width: 860px;
+    height: 416px;
+    width: 100%;
+
+    &:before {
+        content: "";
+
+        // positioning
+        position: absolute;
+        top: 50px;
+        left: 60px;
+
+        // box model
+        width: 140px;
+        height: 30px;
+
+        // visual
+        background-image: url("img/logo/newman-logo-white.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+.services__tab-bg-img {
+    // box model
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.services__tab-info {
+    // positioning
+    position: absolute;
+    left: 60px;
+    bottom: -158px;
+    z-index: 1;
+
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 680px;
+    width: 100%;
+    padding: 57px 47px;
+    padding-top: 47px;
+    padding-bottom: 40px;
+
+    // typography
+    color: $white;
+    font-family: $baseFont;
+
+    // visual
+    background-color: rgba($black, 0.95);
+    opacity: 0.95;
+}
+
+.services__tab-header {
+    // box model
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    max-width: 205px;
+}
+
+.services__tab-title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: inherit;
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.services__tab-text-content {
+    // box model
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    max-width: 290px;
+}
+
+.services__tab-text {
+    // box model
+    margin: 0;
+    margin-bottom: 50px;
+
+    // typography
+    color: inherit;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.services__tab-link {
+    // positioning
+    position: relative;
+
+    // box model
+    margin: 0;
+
+    // typography
+    color: $grey;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        right: -75px;
+        top: 50%;
+
+        // box model
+        width: 8px;
+        height: 12px;
+        margin-top: -6px;
+
+        // visual
+        background-image: url("./img/icons/chevron-right.svg");
+    }
+}
