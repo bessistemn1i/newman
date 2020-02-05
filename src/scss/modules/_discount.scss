@@ -4,12 +4,35 @@
 }
 
 .discount__content {
+    // positioning
+    position: relative;
+
     // box model
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     max-width: 1753px;
+
+    &:after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        left: 285px;
+        top: 370px;
+        z-index: -1;
+
+        // box model
+        height: 300px;
+        width: 100%;
+
+        // visual
+        background-image: url("./img/decor/decorative-discount.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left center;
+    }
 }
 
 .discount__content .section-header {
@@ -19,7 +42,59 @@
 }
 
 .discount__slider {
+    // positioning
+    position: relative;
+
     // box model
     width: 100%;
+    padding-left: 30px;
+
+    // visual
+    overflow: hidden;
     max-width: 1035px;
+}
+
+.discount__slider-nav {
+    // positioning
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 725px;
+    margin-top: -30px;
+}
+
+.discount__slider-btn {
+    // box model
+    height: 12px;
+    width: 12px;
+    
+    // typography
+    font-size: 0;
+
+    // visual
+    background: none;
+    border: none;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    &--prev {
+        // positioning
+        transform: rotate(180deg);
+
+        // visual
+        background-image: url("./img/icons/chevron-right.svg");
+    }
+
+    &--next {
+        // visual
+        background-image: url("./img/icons/chevron-right.svg");
+    }
 }

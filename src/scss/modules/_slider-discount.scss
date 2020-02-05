@@ -1,4 +1,22 @@
 .slider-discount {
+    // positioning
+    position: relative;
+    
     // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
+    flex-wrap: nowrap;
+
+    // visual
+    transition: margin 0.3s ease;
+}
+
+.slider-discount__item {
+    flex-basis: 29%;
+    flex-shrink: 0;
+    flex-grow: 10;
+    margin-right: 600px;
+    transition: left 0.25s ease;
 }
