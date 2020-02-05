@@ -1,0 +1,37 @@
+.team {
+    // box model
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.team .section-header {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 950px;
+}
+
+.team__content {
+    // box model
+    max-width: 1280px;
+}
+
+.team__list {
+    // box model
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.team__list-barber {
+    // box model
+    width: 100%;
+    height: 415px;
+
+    // visual
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 42.37%, rgba(0, 0, 0, 0.91) 100%);
+}

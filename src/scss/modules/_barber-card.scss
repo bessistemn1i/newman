@@ -1,0 +1,15 @@
+.barber-card {
+}
+
+.barber-card__image {
+    // box model
+    width: 100%;
+    height: 100%;
+}
+
+.barber-card__img {
+    // box model
+    display: block;
+    width: 100%;
+    height: 100%;
+}

@@ -1,5 +1,35 @@
 .section-header {
+}
 
+.section-header--right {
+    // box model
+    width: 100%;
+    max-width: 470px;
+    margin-top: 20px;
+}
+
+.section-header--right-title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $grey;
+    font-family: $baseFont;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.section-header--right-subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $grey;
+    font-family: $baseFont;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
 }
 
 .section-header__text-top {
