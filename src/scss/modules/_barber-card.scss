@@ -1,4 +1,30 @@
 .barber-card {
+    // positioning
+    position: relative;
+
+    // box model
+    height: 100%;
+    width: 100%;
+
+    // visual
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);;
+
+    &:before {
+        content: "";
+
+        // positioning
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        // box model
+        display: block;
+        height: 100%;
+        width: 100%;
+
+        // visual
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 42.37%, rgba(0, 0, 0, 0.91) 100%);
+    }
 }
 
 .barber-card__image {
@@ -12,4 +38,50 @@
     display: block;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+
+.barber-card__logo {
+    // positioning
+    position: absolute;
+    top: 45px;
+    right: 20px;
+}
+
+.barber-card__info {
+    // positioning
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    // box model
+    width: 100%;
+    padding-left: 35px;
+    padding-bottom: 15px;
+}
+
+.barber-card__title {
+    // box model
+    margin: 0;
+    margin-bottom: 8px;
+
+    // typography
+    color: $white;
+    font-family: $baseFont;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.barber-card__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $grey;
+    font-family: $baseFont;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    text-transform: uppercase;
 }
