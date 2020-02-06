@@ -4,21 +4,142 @@
     flex-direction: column;
     justify-content: space-between;
     width: 20px;
-    height: 14px;
 
-    cursor: pointer;
+    &--active span {
+        &:nth-child(1) {
+            animation: ease .7s top forwards;
+        }
+
+        &:nth-child(2) {
+            animation: ease .7s scaled forwards;
+        }
+
+        &:nth-child(3) {
+            animation: ease .7s bottom forwards;
+        }
+
+        &:last-child {
+            // box model
+            width: 100%;
+        }
+    }
+
+    &--inactive span {
+        &:nth-child(1) {
+            animation: ease .7s top-2 forwards;
+        }
+    
+        &:nth-child(2) {
+            animation: ease .7s scaled-2 forwards;
+        }
+    
+        &:nth-child(3) {
+            animation: ease .7s bottom-2 forwards;
+        }
+
+        &:last-child {
+            // box model
+            width: 14px;
+        }
+    }
 }
 
-.mobile-icon__line {
+.mobile-icon span {
+    // positioning
+    position: relative;
+
     // box model
     height: 2px;
     width: 100%;
 
     // visual
     background-color: $white;
-
-    &--three {
-        // box model
-        width: 14px;
-    }
+    transition: all 0.3s;
 }
+
+.mobile-icon span + span {
+    // box model
+    margin-top: 4px;
+}
+
+@keyframes top {
+    0% {
+      top: 0;
+      transform: rotate(0);
+    }
+    50% {
+      top: 6px;
+      transform: rotate(0);
+    }
+    100% {
+      top: 6px;
+      transform: rotate(45deg);
+    }
+  }
+  
+  @keyframes top-2 {
+    0% {
+      top: 6px;
+      transform: rotate(45deg);
+    }
+    50% {
+      top: 6px;
+      transform: rotate(0deg);
+    }
+    100% {
+      top: 0;
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes bottom {
+    0% {
+      bottom: 0;
+      transform: rotate(0);
+    }
+    50% {
+      bottom: 6px;
+      transform: rotate(0);
+    }
+    100% {
+      bottom: 6px;
+      transform: rotate(135deg);
+    }
+  }
+  
+  @keyframes bottom-2 {
+    0% {
+      bottom: 6px;
+      transform: rotate(135deg);
+    }
+    50% {
+      bottom: 6px;
+      transform: rotate(0);
+    }
+    100% {
+      bottom: 0;
+      transform: rotate(0);
+    }
+  }
+  
+  @keyframes scaled {
+    50% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  
+  @keyframes scaled-2 {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

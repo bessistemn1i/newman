@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    max-width: 1430px;
+    max-width: 1600px;
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 30px;
@@ -15,6 +15,7 @@
 .main-footer__info-logo {
     // box model
     width: 225px;
+    margin-bottom: 10px;
 }
 
 .main-footer__content {

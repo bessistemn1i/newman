@@ -30,3 +30,41 @@
     // visual
     text-decoration: none;
 }
+
+.main-nav__mobile {
+    // positioning
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-150%);
+    z-index: 123;
+
+    // box model
+    height: 100vh;
+    width: 100%;
+
+    // visual
+    background-color: rgba($black, 0.98);
+    transition: all 0.5s ease;
+
+    &--active {
+        // positioning
+        transform: translateY(0);
+    }
+}
+
+.main-nav__mobile-content {
+    // box model
+    width: 100%;
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.main-nav__top-header {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}

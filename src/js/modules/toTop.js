@@ -1,25 +1,48 @@
+import SmoothScroll from './SmoothScroll';
 class ToTop {
     constructor() {
         this.up = document.querySelector(".up-button");
         this.arrows = [...this.up.querySelectorAll('.up-button__arrow')];
-        this.addEvents();
+        this.target = document.body;
+        if(this.up) {
+            this.up.style.opacity = '0';
+            this.up.style.pointerEvents = 'none';
+            this.addEvents();
+        }
     }
 
-    blinkArrows(arrows) {
-        setInterval(() => {
-            arrows.map((arrow) => {
-                if(arrow.classList.contains('up-button__arrow--active')) {
-                    arrow.classList.remove('up-button__arrow--active');
+    blinkArrows() {
+            setInterval(() => {
+                if(this.up.classList.contains('up-button--blinked')) {
+                    this.up.classList.remove('up-button--blinked');
                 }
                 else {
-                    arrow.classList.add('up-button__arrow--active');
+                    this.up.classList.add('up-button--blinked');
                 }
-            })
-        }, 1000);
+            }, 1000);
     }
 
     addEvents() {
-        this.blinkArrows(this.arrows);
+        this.blinkArrows();
+        const smoothUp = new SmoothScroll({
+            trigger: this.up,
+            target: this.target
+        });
+        document.addEventListener('scroll', () => {
+            /**
+            |--------------------------------------------------
+            | window.scrollY - динамичный скролл от верха страницы (при скролле увеличивается)
+            window.innerHeight - статичная высота окна браузера
+            |--------------------------------------------------
+            */
+            if(window.scrollY > window.innerHeight) {
+              this.up.style.opacity = '1';
+              this.up.style.pointerEvents = 'auto';
+            } else {
+              this.up.style.opacity = '0';
+              this.up.style.pointerEvents = 'none';
+            }
+        });
     }
 }
 

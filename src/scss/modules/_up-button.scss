@@ -1,20 +1,39 @@
 .up-button {
     // positioning
-    position: absolute;
-    top: 10px;
-
+    position: fixed;
+    bottom: 10px;
+    left: 30px;
+    
     // visual
     border: none;
     background: none;
     cursor: pointer;
+    outline: none;
+
+    &--blinked {
+        .up-button__arrow:nth-child(1) {
+            // visual
+            opacity: 1;
+        }
+
+        .up-button__arrow:nth-child(2) {
+            // visual
+            opacity: 0.2;
+        }
+    }
 }
 
 .up-button__arrow {
     // visual
     opacity: 0.2;
     transition: opacity 1s ease-in-out;
-    
-    &--active {
+
+    &:first-child {
+        // visual
+        opacity: 0.2;
+    }
+
+    &:nth-child(2) {
         // visual
         opacity: 1;
     }

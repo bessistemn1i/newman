@@ -1,0 +1,27 @@
+.main-contacts {
+    // positioning
+    position: relative;
+
+    // box model
+    width: 100%;
+    margin-bottom: 90px;
+    padding: 0 calc((100% - 1600px) / 2);
+
+    // visual
+    background-image: url("./img/decor/decorative-contacts.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.main-contacts__content {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 940px;
+}
+
+.main-contacts__info {
+    // box model
+    max-width: 852px;
+}

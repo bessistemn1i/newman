@@ -2,12 +2,7 @@ header.main-header
     .main-header__top-navigation
         .main-header__logo
             img.logo(src="./img/logo/newman-logo.svg", alt="NEWMAN BARBERSHOP")
-        
-        .main-header__mobile-icon
-            .mobile-icon
-                .mobile-icon__line.mobile-icon__line--one
-                .mobile-icon__line.mobile-icon__line--two
-                .mobile-icon__line.mobile-icon__line--three
+    
         .main-header__nav
             nav.main-nav
                 ul.main-nav__list
@@ -17,6 +12,48 @@ header.main-header
                         a.main-nav__link(href="#services") Услуги
                     li.main-nav__item
                         a.main-nav__link(href="#contacts") Контакты
+                
+    .main-nav__mobile
+        .main-nav__mobile-content
+            header.main-nav__top-header
+                .main-nav__top-logo
+                    img.logo(src="./img/logo/newman-logo-white.svg", alt="Newman Barbershop")
+                
+            .main-nav__mobile-info
+                header.main-nav__mobile-header
+                    h3.main-nav__mobile-title Меню
+                    p.main-nav__mobile-subtitle Барбершоп для настоящих ценителей современного мужского стиля
+                .main-nav__mobile-address
+                    .main-nav__mobile-adress-content
+                        h5.main-nav__mobile-address-title Адрес
+                        .p.main-nav__mobile-address-text Норильск Ленинский проспект, 39д ТЦ “Салют"
+                    .main-nav__mobile-hours
+                        h5.main-nav__mobile-hours-title Режим работы
+                        p.main-nav__mobile-hours-days Понедельник - Пятница:09.00 - 20.00
+                        p.main-nav__mobile-hours-days Суббота - Воскресенье:10.00 - 22.00
+            .main-nav__mobile-menu
+                ul.main-nav__mobile-list
+                    li.main-nav__mobile-item
+                        a.main-nav__mobile-link(href="#about") О барбершопе
+                    li.main-nav__mobile-item
+                        a.main-nav__mobile-link(href="#features") Преимущества
+                    li.main-nav__mobile-item
+                        a.main-nav__mobile-link(href="#price") Прайс
+                    li.main-nav__mobile-item
+                        a.main-nav__mobile-link(href="#services") Услуги
+                    li.main-nav__mobile-item
+                        a.main-nav__mobile-link(href="#team") Команда
+                    li.main-nav__mobile-item
+                        a.main-nav__mobile-link(href="#contacts") Контакты
+                .main-nav__mobile-menu-policy
+                    a.main-nav__mobile-menu-policy-link(href="#") Условия использования
+                    a.main-nav__mobile-menu-policy-link(href="#") Политика безопасности
+    .main-header__mobile-icon
+        .mobile-icon.mobile-icon--inactive
+            span
+            span
+            span
+    
     .main-header__content
         .main-header__info
             .section-header
