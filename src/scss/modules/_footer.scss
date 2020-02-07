@@ -98,7 +98,7 @@
     display: block;
 
     // typography
-    color: $black;       
+    color: $black;
     font-family: $baseFont;
     font-size: 12px;
     font-weight: 400;
@@ -106,6 +106,13 @@
 
     // visual
     text-decoration: none;
+    transition: color 0.25s ease;
+
+    &:hover,
+    &:active {
+        // typography
+        color: $grey;
+    }
 }
 
 .main__footer-social-list {

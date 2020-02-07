@@ -29,6 +29,13 @@
 
     // visual
     text-decoration: none;
+    transition: color 0.25s ease;
+    
+    &:hover,
+    &:active {
+        // typography
+        color: $grey;
+    }
 }
 
 .main-nav__mobile {
@@ -55,10 +62,44 @@
 
 .main-nav__mobile-content {
     // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
-    max-width: 1280px;
-    margin-right: auto;
+    max-width: 1600px;
     margin-left: auto;
+    margin-right: auto;
+}
+
+.main-nav__main-content {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    justify-content: space-between;
+    max-width: 1065px;
+    width: 100%;
+
+    &:after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        bottom: -30px;
+        right: -350px;
+
+        // box model
+        display: block;
+        width: 440px;
+        height: 440px;
+
+        // visual
+        background-image: url("./img/logo/stamp-with-logo.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
 }
 
 .main-nav__top-header {
@@ -67,4 +108,189 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    padding-top: 45px;
+    margin-bottom: 95px;
+    width: 100%;
+
+}
+
+.main-nav__mobile-info {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    max-width: 320px;
+}
+
+.main-nav__mobile-header {
+    // box model
+    margin-bottom: 115px;
+}
+
+.main-nav__mobile-title {
+    // box model
+    margin: 0;
+    margin-bottom: 13px;
+
+    // typography
+    color: $white;
+    font-family: $baseFont;
+    font-size: 96px;
+    font-weight: 300;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.main-nav__mobile-subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $grey;
+    font-family: $baseFont;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.main-nav__mobile-small-title {
+    // box model
+    margin: 0;
+    margin-bottom: 10px;
+
+    // typography
+    color: $white;
+    font-family: $baseFont;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+}
+
+.main-nav__mobile-adress-content {
+    // box model
+    margin-bottom: 75px;
+}
+
+.main-nav__mobile-hours-days {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $grey;
+    font-family: $baseFont;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.main-nav__mobile-menu {
+    // box model
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    max-width: 520px;
+
+    // typography
+    text-align: left;
+}
+
+.main-nav__mobile-list {
+    // positioning
+    position: relative;
+
+    // box model
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 115px;
+
+    // visual
+    list-style: none;
+
+    &:after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        left: 0;
+        bottom: -85px;
+
+        // box model
+        width: 100%;
+        height: 1px;
+
+        // visual
+        background-color: rgba($white, 0.5);
+    }
+}
+
+.main-nav__mobile-item {
+    // box model
+    margin-bottom: 35px;
+
+    &:last-child {
+        // box model
+        margin-bottom: 0;
+    }
+}
+
+.main-nav__mobile-link {
+    // box model
+    display: block;
+
+    // typography
+    color: $white;
+    font-family: $baseFont;
+    font-size: 36px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    // visual
+    cursor: pointer;
+    transition: color 0.25s ease;
+
+    &:hover,
+    &:active {
+        // typography
+        color: $grey;
+    }
+}
+
+.main-nav__mobile-menu-policy {
+    // box model
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.main-nav__mobile-menu-policy-link {
+    // box model
+    display: block;
+    margin: 4px 0;
+
+    // typography
+    color: $white;
+    font-family: $baseFont;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    text-decoration: none;
+
+    // visual
+    transition: color 0.25s ease;
+
+    &:hover,
+    &:active {
+        // typography
+        color: $grey;
+    }
 }

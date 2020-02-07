@@ -34,4 +34,10 @@ a.social-aside__link {
     line-height: 12px;
     text-transform: uppercase;
     text-decoration: none;
+    transition: color 0.25s ease;
+    &:hover,
+    &:active {
+        // typography
+        color: $red;
+    }
 }
