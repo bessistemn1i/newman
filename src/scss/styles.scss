@@ -5,26 +5,24 @@
 @import "base/vars";
 @import "base/mixins";
 @import "base/globals";
-
-// fonts
 @import "fonts/fonts";
 
 // modules
 @import "modules/header";
 @import "modules/footer";
 @import "modules/up-button";
-@import "modules/logo";
-@import "modules/main-nav";
-@import "modules/section-header";
-@import "modules/btn";
 @import "modules/contacts";
-@import "modules/social-aside";
-@import "modules/mobile-icon";
 @import "modules/feature";
 @import "modules/price-table";
 @import "modules/discount-card";
 @import "modules/slider-discount";
 @import "modules/barber-card";
+@import "modules/logo";
+@import "modules/main-nav";
+@import "modules/section-header";
+@import "modules/btn";
+@import "modules/social-aside";
+@import "modules/mobile-icon";
 
 // sections
 

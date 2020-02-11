@@ -37,21 +37,6 @@
         background-size: contain;
         background-position: center center;
     }
-    &--complex {
-        // typography
-        color: $white;
-
-        // visual
-        background-image: url("./img/services/shaving-large.jpg");
-    }
-
-    &--king {
-        // typography
-        color: $white;
-
-        // visual
-        background-image: url("./img/services/styling-man.jpg");
-    }
 }
 
 .discount-card__header {

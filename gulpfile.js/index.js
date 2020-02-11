@@ -19,7 +19,7 @@ const dirs = {
   styles: './src/scss/styles.scss',
   js: './src/js/**/*.js',
   php: './wp/**/*.php',
-  wp: 'C:/xampp/htdocs/newman/wp-content/themes/newman-theme',
+  wp: 'C:/xampp/htdocs/newman/wp-content/themes/newman',
 
   dist: './dist'
 };

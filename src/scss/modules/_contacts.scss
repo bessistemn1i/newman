@@ -68,7 +68,14 @@
     }
 }
 
-.contacts__address-city,
+.contacts__address-title--phone {
+    &:after {
+        // visual
+        background-image: url("./img/icons/phone.svg");
+    }
+}
+
+.contacts__address-stress,
 .contacts__working-hours-days {
     // box model
     margin: 0;
@@ -81,7 +88,7 @@
     line-height: 24px;
 }
 
-.contacts__address-city,
+.contacts__address-stress,
 .contacts__address-landmark {
     // box model
     display: block;
@@ -99,7 +106,7 @@
     line-height: 20px;
 }
 
-.contacts__address-place {
+.contacts__address-subtitle {
     // box model
     margin: 0;
 

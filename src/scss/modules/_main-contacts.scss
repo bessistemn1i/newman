@@ -14,14 +14,38 @@
 }
 
 .main-contacts__content {
+    // positioning
+    position: relative;
+
     // box model
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 940px;
+
+    &:after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        right: 200px;
+        top: 0;
+
+        // box model
+        display: block;
+        height: 100%;
+        max-height: 768px;
+        width: 535px;
+
+        // visual
+        background-image: url("./img/bg/team-bg.jpg");
+        background-size: cover;
+        background-position: center center;
+        box-shadow: 0 20px 24px rgba(0, 0, 0, 0.25);
+    }
 }
 
 .main-contacts__info {
     // box model
-    max-width: 852px;
+    max-width: 1400px;
 }

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Newman barbershop</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" /><noscript>
+        <link rel="stylesheet" href="styles.css" /></noscript>
 </head>
 
 <body>
@@ -16,9 +17,9 @@
             <div class="main-header__nav">
                 <nav class="main-nav">
                     <ul class="main-nav__list">
-                        <li class="main-nav__item"><a class="main-nav__link" href="#price">Прайс</a></li>
-                        <li class="main-nav__item"><a class="main-nav__link" href="#services">Услуги</a></li>
-                        <li class="main-nav__item"><a class="main-nav__link" href="#contacts">Контакты</a></li>
+                        <li class="main-nav__item"><a class="main-nav__link smooth-trigger" href="#price">Прайс</a></li>
+                        <li class="main-nav__item"><a class="main-nav__link smooth-trigger" href="#services">Услуги</a></li>
+                        <li class="main-nav__item"><a class="main-nav__link smooth-trigger" href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
@@ -48,12 +49,12 @@
                     </div>
                     <div class="main-nav__mobile-menu">
                         <ul class="main-nav__mobile-list">
-                            <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#about">О барбершопе</a></li>
-                            <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#features">Преимущества</a></li>
-                            <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#price">Прайс</a></li>
-                            <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#services">Услуги</a></li>
-                            <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#team">Команда</a></li>
-                            <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#contacts">Контакты</a></li>
+                            <li class="main-nav__mobile-item"><a class="main-nav__mobile-link smooth-trigger" href="#about">О барбершопе</a></li>
+                            <li class="main-nav__mobile-item"><a class="main-nav__mobile-link smooth-trigger" href="#features">Преимущества</a></li>
+                            <li class="main-nav__mobile-item"><a class="main-nav__mobile-link smooth-trigger" href="#price">Прайс</a></li>
+                            <li class="main-nav__mobile-item"><a class="main-nav__mobile-link smooth-trigger" href="#services">Услуги</a></li>
+                            <li class="main-nav__mobile-item"><a class="main-nav__mobile-link smooth-trigger" href="#team">Команда</a></li>
+                            <li class="main-nav__mobile-item"><a class="main-nav__mobile-link smooth-trigger" href="#contacts">Контакты</a></li>
                         </ul>
                         <div class="main-nav__mobile-menu-policy"><a class="main-nav__mobile-menu-policy-link" href="#">Условия использования</a><a class="main-nav__mobile-menu-policy-link" href="#">Политика безопасности</a></div>
                     </div>
@@ -71,7 +72,7 @@
                     <p class="section-header__subtitle">Для настоящих ценителей мужского стиля</p>
                 </div>
                 <p class="main-header__descr main-font">Мы больше чем просто парикмахерская, мы создаем современную класику мужских стрижек и бритья. NEWMAN NORILSK — место с твоим характером.</p>
-                <div class="main-header__buttons"><button class="btn btn--active">Запись онлайн</button><button class="btn">Контакты</button></div>
+                <div class="main-header__buttons"><button class="btn btn--active">Запись онлайн</button><a class="btn smooth-trigger" href="#contacts">Контакты</a></div>
             </div>
             <div class="main-header__image-small"><img src="./img/promos/cutting.jpg" alt="Стрижка" /></div>
             <div class="main-header__image-big"><img src="./img/services/shaving-large.jpg" alt="Бритье" /></div>
@@ -82,7 +83,13 @@
                     <div class="contacts__address-header">
                         <h3 class="contacts__address-title contacts__address-title--address">Адрес</h3>
                     </div>
-                    <p class="contacts__address-place"><span class="contacts__address-city">Норильск</span> Ленинский проспект, 39д <span class="contacts__address-landmark">ТЦ "Салют"</span></p>
+                    <p class="contacts__address-subtitle"><span class="contacts__address-stress">Норильск</span> Ленинский проспект, 39д <span class="contacts__address-landmark">ТЦ "Салют"</span></p>
+                </div>
+                <div class="contacts__address">
+                    <div class="contacts__address-header">
+                        <h3 class="contacts__address-title contacts__address-title--phone">Телефон</h3>
+                    </div>
+                    <p class="contacts__address-subtitle"><span class="contacts__address-stress">Для записи</span> +7 (913) 492-38-14</p>
                 </div>
                 <div class="contacts__working-hours">
                     <div class="contacts__working-hours-header">
@@ -110,7 +117,7 @@
                 </header>
                 <p class="section-header__descr">Мы&nbsp;не&nbsp;пытаемся выделяться вычурным интерьером, главное для нас это качественные стрижки и&nbsp;довольные клиенты для которых мы&nbsp;готовы выкладыватьс по&nbsp;полной каждый день.</p>
                 <p class="section-header__descr section-header__descr--stress">Неповторимая классика мужского стиля и профессионализм — вот наши главные приоритеты в работе.</p>
-                <div class="section-header__buttons"><button class="btn btn--big">Подробнее об услугах</button></div>
+                <div class="section-header__buttons"><a class="btn btn--big" href="#services">Подробнее об услугах</a></div>
             </div>
             <div class="about__image"><img class="about-img" src="./img/bg/team-bg.jpg" alt="О компании Newman" /></div>
             <section class="features" id="features">
@@ -127,7 +134,7 @@
                             <div class="feature__descr">
                                 <p class="feature__text">Территория стиля и брутальности, место где вы почувствуете настоящую атмосферу мужского барбершопа</p>
                             </div>
-                            <div class="feature__mark"><img class="feature__image-mark" src="./img/icons/for-men.svg" alt="Для настоящих мужчин" /><button class="btn btn--active">Наши услуги</button></div>
+                            <div class="feature__mark"><img class="feature__image-mark" src="./img/icons/for-men.svg" alt="Для настоящих мужчин" /><a class="btn btn--active" href="#services">Наши услуги</a></div>
                         </div>
                     </div>
                     <div class="features__item">
@@ -139,7 +146,7 @@
                             <div class="feature__descr">
                                 <p class="feature__text">Опытная барберы подберут при необходимости подходящий именно вам стиль стрижки и оформления бороды, подчеркивающий вашу индивидальность и статус.</p>
                             </div>
-                            <div class="feature__mark"><img class="feature__image-mark" src="./img/icons/quality.svg" alt="Команда профессионалов" /><button class="btn btn--active">Наши услуги</button></div>
+                            <div class="feature__mark"><img class="feature__image-mark" src="./img/icons/quality.svg" alt="Команда профессионалов" /><a class="btn btn--active" href="#services">Наши услуги</a></div>
                         </div>
                     </div>
                     <div class="features__item">
@@ -151,7 +158,7 @@
                             <div class="feature__descr">
                                 <p class="feature__text">Мы работаетм только с официальными компаниями поставщиками профессионального обордования </p>
                             </div>
-                            <div class="feature__mark"><img class="feature__image-mark" src="./img/icons/blade.svg" alt="Качественное борудование" /><button class="btn btn--active">Наши услуги</button></div>
+                            <div class="feature__mark"><img class="feature__image-mark" src="./img/icons/blade.svg" alt="Качественное борудование" /><a class="btn btn--active" href="#services">Наши услуги</a></div>
                         </div>
                     </div>
                     <div class="features__item">
@@ -163,7 +170,7 @@
                             <div class="feature__descr">
                                 <p class="feature__text">Мы уделяем внимание даже самым мелочам, воспользуйтесь возможностью оформить он-лайн запись прямо на нашем сайте</p>
                             </div>
-                            <div class="feature__mark"><img class="feature__image-mark" src="./img/icons/shild.svg" alt="Комфортный сервис" /><button class="btn btn--active">Наши услуги</button></div>
+                            <div class="feature__mark"><img class="feature__image-mark" src="./img/icons/shild.svg" alt="Комфортный сервис" /><a class="btn btn--active" href="#services">Наши услуги</a></div>
                         </div>
                     </div>
                 </div>
@@ -492,13 +499,19 @@
                 <div class="contacts">
                     <div class="contacts__address">
                         <div class="contacts__address-header">
-                            <h3 class="contacts__address-title">Адресс</h3>
+                            <h3 class="contacts__address-title contacts__address-title--address">Адрес</h3>
                         </div>
-                        <p class="contacts__address-place"><span class="contacts__address-city">Норильск</span> Ленинский проспект, 39д <span class="contacts__address-landmark">ТЦ "Салют"</span></p>
+                        <p class="contacts__address-subtitle"><span class="contacts__address-stress">Норильск</span> Ленинский проспект, 39д <span class="contacts__address-landmark">ТЦ "Салют"</span></p>
+                    </div>
+                    <div class="contacts__address">
+                        <div class="contacts__address-header">
+                            <h3 class="contacts__address-title contacts__address-title--phone">Телефон</h3>
+                        </div>
+                        <p class="contacts__address-subtitle"><span class="contacts__address-stress">Для записи</span> +7 (913) 492-38-14</p>
                     </div>
                     <div class="contacts__working-hours">
                         <div class="contacts__working-hours-header">
-                            <h3 class="contacts__working-hours-title">Режим работы</h3>
+                            <h3 class="contacts__working-hours-title contacts__working-hours-title--hours">Режим работы</h3>
                         </div>
                         <div class="contacts__working-hours-block">
                             <p class="contacts__working-hours-days">Понедельник - Пятница</p>
@@ -506,7 +519,7 @@
                         </div>
                         <div class="contacts__working-hours-block">
                             <p class="contacts__working-hours-days">Суббота - Воскресенье</p>
-                            <p class="contacts__working-hours-time">10.00 22.00</p>
+                            <p class="contacts__working-hours-time">10.00 - 22.00</p>
                         </div>
                     </div>
                 </div>
@@ -538,7 +551,7 @@
                         <h4 class="main__footer-social-title ghost-font ghost-font--red">Мы в социальных сетях</h4>
                     </div>
                     <ul class="main__footer-social-list">
-                        <li class="main__footer-social-item"><a class="main__footer-social-link ghost-font" href="#">instagram</a></li>
+                        <li class="main__footer-social-item"><a class="main__footer-social-link ghost-font" href="https://www.instagram.com/new_man_barbershop" target="_blank">instagram</a></li>
                         <li class="main__footer-social-item"><a class="main__footer-social-link ghost-font" href="#">vkontakte</a></li>
                     </ul>
                     <div class="main__footer-policy"><a class="main__footer-policy-link" href="#">Условия использования</a><a class="main__footer-policy-link" href="#">Политика безопасности</a></div>
@@ -553,7 +566,7 @@
     </footer>
     <ul class="social-aside">
         <li class="social-aside__item"><a class="social-aside__link" href="#">vkontakte</a></li>
-        <li class="social-aside__item"><a class="social-aside__link" href="#">instagram</a></li>
+        <li class="social-aside__item"><a class="social-aside__link" href="https://www.instagram.com/new_man_barbershop" target="_blank">instagram</a></li>
     </ul>
     <script src="main.js"></script>
 </body>

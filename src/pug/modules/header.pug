@@ -7,11 +7,11 @@ header.main-header
             nav.main-nav
                 ul.main-nav__list
                     li.main-nav__item
-                        a.main-nav__link(href="#price") Прайс
+                        a.main-nav__link.smooth-trigger(href="#price") Прайс
                     li.main-nav__item
-                        a.main-nav__link(href="#services") Услуги
+                        a.main-nav__link.smooth-trigger(href="#services") Услуги
                     li.main-nav__item
-                        a.main-nav__link(href="#contacts") Контакты
+                        a.main-nav__link.smooth-trigger(href="#contacts") Контакты
                 
     .main-nav__mobile
         .main-nav__mobile-content
@@ -34,17 +34,17 @@ header.main-header
                 .main-nav__mobile-menu
                     ul.main-nav__mobile-list
                         li.main-nav__mobile-item
-                            a.main-nav__mobile-link(href="#about") О барбершопе
+                            a.main-nav__mobile-link.smooth-trigger(href="#about") О барбершопе
                         li.main-nav__mobile-item
-                            a.main-nav__mobile-link(href="#features") Преимущества
+                            a.main-nav__mobile-link.smooth-trigger(href="#features") Преимущества
                         li.main-nav__mobile-item
-                            a.main-nav__mobile-link(href="#price") Прайс
+                            a.main-nav__mobile-link.smooth-trigger(href="#price") Прайс
                         li.main-nav__mobile-item
-                            a.main-nav__mobile-link(href="#services") Услуги
+                            a.main-nav__mobile-link.smooth-trigger(href="#services") Услуги
                         li.main-nav__mobile-item
-                            a.main-nav__mobile-link(href="#team") Команда
+                            a.main-nav__mobile-link.smooth-trigger(href="#team") Команда
                         li.main-nav__mobile-item
-                            a.main-nav__mobile-link(href="#contacts") Контакты
+                            a.main-nav__mobile-link.smooth-trigger(href="#contacts") Контакты
                     .main-nav__mobile-menu-policy
                         a.main-nav__mobile-menu-policy-link(href="#") Условия использования
                         a.main-nav__mobile-menu-policy-link(href="#") Политика безопасности
@@ -63,7 +63,7 @@ header.main-header
             p.main-header__descr.main-font Мы больше чем просто парикмахерская, мы создаем современную класику мужских стрижек и бритья. NEWMAN NORILSK — место с твоим характером.
             .main-header__buttons
                 button.btn.btn--active Запись онлайн
-                button.btn Контакты
+                a.btn.smooth-trigger(href="#contacts") Контакты
         
         .main-header__image-small
             img(src="./img/promos/cutting.jpg", alt="Стрижка")
@@ -75,7 +75,11 @@ header.main-header
             .contacts__address
                 .contacts__address-header
                     h3.contacts__address-title.contacts__address-title--address Адрес
-                p.contacts__address-place <span class="contacts__address-city">Норильск</span> Ленинский проспект, 39д <span class="contacts__address-landmark">ТЦ "Салют"</span>
+                p.contacts__address-subtitle <span class="contacts__address-stress">Норильск</span> Ленинский проспект, 39д <span class="contacts__address-landmark">ТЦ "Салют"</span>
+            .contacts__address
+                .contacts__address-header
+                    h3.contacts__address-title.contacts__address-title--phone Телефон
+                p.contacts__address-subtitle <span class="contacts__address-stress">Для записи</span> +7 (913) 492-38-14
             .contacts__working-hours
                 .contacts__working-hours-header
                     h3.contacts__working-hours-title.contacts__working-hours-title--hours Режим работы

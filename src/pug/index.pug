@@ -6,6 +6,8 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Newman barbershop
         link(rel="stylesheet", href="styles.css")
+        noscript
+            link(rel="stylesheet", href="styles.css")
     body
         include ./modules/header.pug
 
@@ -19,7 +21,7 @@ html(lang="ru")
                     p.section-header__descr Мы&nbsp;не&nbsp;пытаемся выделяться вычурным интерьером, главное для нас это качественные стрижки и&nbsp;довольные клиенты для которых мы&nbsp;готовы выкладыватьс по&nbsp;полной каждый день.
                     p.section-header__descr.section-header__descr--stress Неповторимая классика мужского стиля и профессионализм — вот наши главные приоритеты в работе.
                     .section-header__buttons
-                        button.btn.btn--big Подробнее об услугах
+                        a(href="#services").btn.btn--big Подробнее об услугах
                 .about__image
                     img.about-img(src="./img/bg/team-bg.jpg", alt="О компании Newman")
         
@@ -36,7 +38,7 @@ html(lang="ru")
                                     p.feature__text Территория стиля и брутальности, место где вы почувствуете настоящую атмосферу мужского барбершопа
                                 .feature__mark
                                     img.feature__image-mark(src="./img/icons/for-men.svg", alt="Для настоящих мужчин")
-                                    button.btn.btn--active Наши услуги
+                                    a(href="#services").btn.btn--active Наши услуги
                         .features__item
                             .feature
                                 header.feature__header
@@ -46,7 +48,7 @@ html(lang="ru")
                                     p.feature__text Опытная барберы подберут при необходимости подходящий именно вам стиль стрижки и оформления бороды, подчеркивающий вашу индивидальность и статус.
                                 .feature__mark
                                     img.feature__image-mark(src="./img/icons/quality.svg", alt="Команда профессионалов")
-                                    button.btn.btn--active Наши услуги
+                                    a(href="#services").btn.btn--active Наши услуги
                         .features__item
                             .feature
                                 header.feature__header
@@ -56,7 +58,7 @@ html(lang="ru")
                                     p.feature__text Мы работаетм только с официальными компаниями поставщиками профессионального обордования 
                                 .feature__mark
                                     img.feature__image-mark(src="./img/icons/blade.svg", alt="Качественное борудование")
-                                    button.btn.btn--active Наши услуги
+                                    a(href="#services").btn.btn--active Наши услуги
                         .features__item
                             .feature
                                 header.feature__header
@@ -66,7 +68,7 @@ html(lang="ru")
                                     p.feature__text Мы уделяем внимание даже самым мелочам, воспользуйтесь возможностью оформить он-лайн запись прямо на нашем сайте
                                 .feature__mark
                                     img.feature__image-mark(src="./img/icons/shild.svg", alt="Комфортный сервис")
-                                    button.btn.btn--active Наши услуги
+                                    a(href="#services").btn.btn--active Наши услуги
         
         section.price#price
             .price__content-full
@@ -327,24 +329,27 @@ html(lang="ru")
                     .contacts
                         .contacts__address
                             .contacts__address-header
-                                h3.contacts__address-title Адресс
-                            p.contacts__address-place <span class="contacts__address-city">Норильск</span> Ленинский проспект, 39д <span class="contacts__address-landmark">ТЦ "Салют"</span>
+                                h3.contacts__address-title.contacts__address-title--address Адрес
+                            p.contacts__address-subtitle <span class="contacts__address-stress">Норильск</span> Ленинский проспект, 39д <span class="contacts__address-landmark">ТЦ "Салют"</span>
+                        .contacts__address
+                            .contacts__address-header
+                                h3.contacts__address-title.contacts__address-title--phone Телефон
+                            p.contacts__address-subtitle <span class="contacts__address-stress">Для записи</span> +7 (913) 492-38-14
                         .contacts__working-hours
                             .contacts__working-hours-header
-                                h3.contacts__working-hours-title Режим работы
+                                h3.contacts__working-hours-title.contacts__working-hours-title--hours Режим работы
                             .contacts__working-hours-block
                                 p.contacts__working-hours-days Понедельник - Пятница
                                 p.contacts__working-hours-time 09.00 - 22.00
                             .contacts__working-hours-block
                                 p.contacts__working-hours-days Суббота - Воскресенье
-                                p.contacts__working-hours-time 10.00 22.00
-
+                                p.contacts__working-hours-time 10.00 - 22.00
         include ./modules/footer.pug
         
         ul.social-aside
             li.social-aside__item
                 a.social-aside__link(href="#") vkontakte
             li.social-aside__item
-                a.social-aside__link(href="#") instagram
+                a.social-aside__link(href="https://www.instagram.com/new_man_barbershop" target="_blank") instagram
         
         script(src="main.js")
