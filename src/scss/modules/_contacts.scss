@@ -1,9 +1,14 @@
 .contacts {
     // box model
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include atDesktopM {
+        // box model
+        flex-direction: row;
+    }
 }
 
 .contacts__address {
@@ -13,11 +18,20 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 25px;
+
+    @include atDesktopM {
+        // box model
+        width: auto;
+        margin-bottom: 0;
+    }
 }
 
 .contacts__address-header,
 .contacts__working-hours-header {
     // box model
+    width: 100%;
     margin-bottom: 9px;
 }
 
@@ -28,7 +42,6 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 175px;
     margin: 0;
     margin-right: 35px;
 
@@ -51,6 +64,11 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 175px;
     }
 }
 

@@ -1,6 +1,12 @@
 .main-nav {
     // box model
-    width: 100%;
+    display: none;
+
+    @include atDesktopM {
+        // box model
+        display: block;
+        width: 100%;
+    }
 }
 
 .main-nav__list {
@@ -56,20 +62,30 @@
 
     &--active {
         // positioning
+        position: fixed;
         transform: translateY(0);
+    }
+
+    @include atDesktopM {
+
     }
 }
 
 .main-nav__mobile-content {
     // box model
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
+
+    @include atDesktopM {
+        // box model
+        flex-direction: row;
+    }
 }
 
 .main-nav__main-content {
@@ -78,27 +94,36 @@
 
     // box model
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     max-width: 1065px;
     width: 100%;
 
-    &:after {
-        content: "";
-
-        // positioning
-        position: absolute;
-        bottom: -30px;
-        right: -350px;
-
+    @include atDesktopM {
         // box model
-        display: block;
-        width: 440px;
-        height: 440px;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
 
-        // visual
-        background-image: url("./img/logo/stamp-with-logo.svg");
-        background-repeat: no-repeat;
-        background-position: center center;
+        &:after {
+            content: "";
+    
+            // positioning
+            position: absolute;
+            bottom: -30px;
+            right: -350px;
+    
+            // box model
+            display: block;
+            width: 440px;
+            height: 440px;
+    
+            // visual
+            background-image: url("./img/logo/stamp-with-logo.svg");
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
     }
 }
 
@@ -109,9 +134,16 @@
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 45px;
-    margin-bottom: 95px;
+    margin-bottom: 0;
     width: 100%;
+    padding: 30px;
+    padding-top: 40px;
 
+    @include atDesktopM {
+        // box model
+        margin-bottom: 95px;
+        padding-top: 45px;
+    }
 }
 
 .main-nav__mobile-info {
@@ -122,12 +154,46 @@
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 100%;
-    max-width: 320px;
+    width: 100%;
+    order: 2;
+
+    @include atDesktopM {
+        order: 1;
+
+        // box model
+        max-width: 320px;
+    }
+}
+
+.main-nav__top-logo {
+    // box model
+    height: 42px;
+    width: 190px;
+
+    // visual
+    background-image: url("./img/logo/newman-logo-white.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+
+    @include atDesktopM {
+        // box model
+        height: auto;
+
+        // visual
+        background-image: none;
+    }
 }
 
 .main-nav__mobile-header {
     // box model
-    margin-bottom: 115px;
+    display: none;
+    
+    @include atDesktopM {
+        // box model
+        display: block;
+        margin-bottom: 115px;
+    }
 }
 
 .main-nav__mobile-title {
@@ -158,6 +224,7 @@
 
 .main-nav__mobile-small-title {
     // box model
+    display: none;
     margin: 0;
     margin-bottom: 10px;
 
@@ -167,11 +234,24 @@
     font-size: 10px;
     font-weight: 400;
     line-height: 12px;
+
+    @include atDesktopM {
+        // box model
+        display: block;
+    }
 }
 
 .main-nav__mobile-adress-content {
-    // box model
-    margin-bottom: 75px;
+    // typography
+    text-align: center;
+
+    @include atDesktopM {
+        // box model
+        margin-bottom: 75px;
+
+        // typography
+        text-align: left;
+    }
 }
 
 .main-nav__mobile-hours-days {
@@ -190,15 +270,24 @@
     // box model
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 100%;
     max-width: 520px;
+    margin-bottom: 25px;
 
     // typography
     text-align: left;
+
+    @include atDesktopM {
+        // box model
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 0;
+    }
 }
 
 .main-nav__mobile-list {
@@ -209,7 +298,7 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    margin-bottom: 115px;
+    margin-bottom: 23px;
 
     // visual
     list-style: none;
@@ -228,6 +317,11 @@
 
         // visual
         background-color: rgba($white, 0.5);
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-bottom: 115px;
     }
 }
 
@@ -248,10 +342,11 @@
     // typography
     color: $white;
     font-family: $baseFont;
-    font-size: 36px;
+    font-size: 18px;
     line-height: 1;
     text-transform: uppercase;
     text-decoration: none;
+    text-align: center;
 
     // visual
     cursor: pointer;
@@ -261,6 +356,12 @@
     &:active {
         // typography
         color: $grey;
+    }
+
+    @include atDesktopM {
+        // typography
+        font-size: 36px;
+        text-align: left;
     }
 }
 
@@ -292,5 +393,15 @@
     &:active {
         // typography
         color: $grey;
+    }
+}
+
+.main-nav__mobile-hours {
+    // box model
+    display: none;
+
+    @include atDesktopM {
+        // box model
+        display: block;
     }
 }

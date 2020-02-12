@@ -8,8 +8,22 @@
 }
 
 .feature .btn {
+    // positioning
+    position: absolute;
+    left: 35px;
+    bottom: 16px;
+
+    // typography
+    font-weight: 700;
+
     // box model
-    display: none;
+    display: block;
+    min-width: 270px;
+
+    @include atDesktopM {
+        // box model
+        display: none;
+    }
 }
 
 .feature__header {
@@ -18,6 +32,7 @@
     
     // box model
     padding: 0 30px;
+
     &:after {
         content: "";
 
@@ -46,11 +61,16 @@
     margin: 0;
 
     // typography
-    color: rgba($grey, 0.5);
+    color: rgba($white, 0.5);
     font-family: $baseFont;
     font-size: 14px;
     font-weight: 400;
     line-height: 32px;
+    
+    @include atDesktopM {
+        // typography
+        color: rgba($grey, 0.5);
+    }
 }
 
 .feature__title {
@@ -58,11 +78,16 @@
     margin: 0;
 
     // typography
-    color: $black;
+    color: $white;
     font-family: $baseFont;
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
+
+    @include atDesktopM {
+        // typography
+        color: $black;
+    }
 }
 
 .feature__text {
@@ -70,11 +95,16 @@
     margin: 0;
 
     // typography
-    color: $black;
+    color: $white;
     font-family: $baseFont;
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
+
+    @include atDesktopM {
+        // typography
+        color: $black;
+    }
 }
 
 .feature__mark {
@@ -86,7 +116,12 @@
 
 .feature__image-mark {
     // box model
-    display: inline-block;
-    width: 48px;
-    height: 48px;
+    display: none;
+
+    @include atDesktopM {
+        // box model
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+    }
 }

@@ -1,0 +1,43 @@
+.top-contacts {
+    // box model
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.top-contacts__content {
+    // positioning
+    position: relative;
+
+    // box model
+    width: 100%;
+    max-width: 1400px;
+    margin-bottom: 55px;
+    padding: 0 30px;
+
+    @include atDesktopM {
+        // box model
+        margin-bottom: 160px;
+
+        &:after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            left: calc(100% - 800px);
+            bottom: -133px;
+            z-index: -1;
+
+            // box model
+            display: block;
+            width: 960px;
+            height: 295px;
+
+            // visual
+            background-image: url("./img/decor/decorative-brand.svg");
+            background-size: contain;
+            background-position: center center;
+            opacity: 0.8;
+        }
+    }
+}

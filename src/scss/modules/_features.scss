@@ -46,12 +46,22 @@
     // box model
     width: 100%;
     max-width: 280px;
-    margin: 0 15px;
+    margin-bottom: 30px;
 
     // visual
-    background: none;
-    transition: all 0.25s ease;
-    cursor: pointer;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: initial;
+
+    @include atDesktopM {
+        // box model
+        margin: 0 15px;
+
+        // visual
+        transition: all 0.25s ease;
+        cursor: pointer;
+    }
 
     &:after {
         content: "";
@@ -76,11 +86,50 @@
     &:first-child {
         // box model
         margin-left: 0;
+
+        // visual
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url("./img/promos/cutting.jpg");
+
+        @include atDesktopM {
+            // visual
+            background: none;
+        }
     }
 
     &:last-child {
         // box model
-        margin-right: 30px;
+        margin-bottom: 0;
+
+        // visual
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url("./img/services/shaving-large.jpg");
+
+        @include atDesktopM {
+            // box model
+            margin-right: 30px;
+
+            // visual
+            background: none;
+        }
+    }
+
+    &:nth-child(2) {
+        // visual
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url("./img/services/shaving-accessories.jpg");
+
+        @include atDesktopM {
+            // visual
+            background: none;
+        }
+    }
+
+    &:nth-child(3) {
+        // visual
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url("./img/services/styling-man.jpg");
+
+        @include atDesktopM {
+            // visual
+            background: none;
+        }
     }
 
     &:hover {

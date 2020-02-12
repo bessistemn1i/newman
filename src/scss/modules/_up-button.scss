@@ -4,6 +4,9 @@
     bottom: 10px;
     left: 30px;
     
+    // box model
+    display: none;
+
     // visual
     border: none;
     background: none;
@@ -20,6 +23,11 @@
             // visual
             opacity: 0.2;
         }
+    }
+
+    @include atDesktopM {
+        // box model
+        display: block;
     }
 }
 

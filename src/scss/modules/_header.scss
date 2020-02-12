@@ -4,7 +4,36 @@
     margin-right: auto;
     margin-left: auto;
     padding-top: 40px;
-    margin-bottom: 160px;
+    margin-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 97px;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./img/promos/cutting.jpg");
+    background-size: cover;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+    background-position: center;
+
+    @include atDesktopM {
+        // box model
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 0;
+
+        // visual
+        background: none;
+        box-shadow: none;
+    }
+}
+
+.main-header .section-header__title,
+.main-header .section-header__subtitle {
+    // typography
+    color: $white;
+
+    @include atDesktopM {
+        // typography
+        color: $black;
+    }
 }
 
 .main-header__top-navigation {
@@ -19,31 +48,71 @@
     align-items: center;
     width: 100%;
     max-width: 956px;
-    margin-bottom: 85px;
+    margin-bottom: 35px;
+
+    @include atDesktopM {
+        // box model
+        margin-bottom: 85px;
+    }
 }
 
 .main-header__logo {
     // box model
     max-width: 225px;
+    width: 100%;
+    height: 42px;
+
+    // visual
+    background-image: url("./img/logo/newman-logo-white.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+
+    @include atDesktopM {
+        // box model
+        height: auto;
+
+        // visual
+        background-image: none;
+    }
+}
+
+.main-header .logo {
+    // box model
+    display: none;
+
+    @include atDesktopM {
+        // box model
+        display: block;
+    }
 }
 
 .main-header__mobile-icon {
     // positioning
-    position: absolute;
-    right: 320px;
+    position: fixed;
+    right: 30px;
     top: 55px;
     z-index: 321;
 
     // visual
     cursor: pointer;
+
+    @include atDesktopM {
+        // positioning
+        right: 320px;
+    }
 }
 
 .main-header__nav {
-    // box model
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 412px;
-    max-width: 412px;
+    
+
+    @include atDesktopM {
+        // box model
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 412px;
+        max-width: 412px;
+    }
 }
 
 .main-header__content {
@@ -56,32 +125,14 @@
     justify-content: space-between;
     width: 100%;
     max-width: 1520px;
-    margin-bottom: 35px;
-
-    &:before {
-        content: "";
-
-        // positioning
-        position: absolute;
-        right: 75px;
-        bottom: 0;
-
-        // box model
-        display: block;
-        width: 800px;
-        height: 800px;
-
-        // visual
-        background-image: url("./img/bg/body-bg.svg");
-    }
 
     &:after {
         content: "";
 
         // positioning
         position: absolute;
-        right: 75px;
-        bottom: -20px;
+        right: -490px;
+        bottom: -150px;
         z-index: 3;
 
         // box model
@@ -95,34 +146,61 @@
         background-repeat: no-repeat;
         mix-blend-mode: overlay;
     }
+
+    @include atDesktopM {
+        &:before {
+            content: "";
+    
+            // positioning
+            position: absolute;
+            right: 75px;
+            bottom: 0;
+    
+            // box model
+            display: block;
+            width: 800px;
+            height: 800px;
+    
+            // visual
+            background-image: url("./img/bg/body-bg.svg");
+        }
+
+        &:after {
+            // box model
+            right: 75px;
+            bottom: -20px;
+        }
+    }
 }
 
 .main-header__info {
     // positioning
     position: relative;
 
-    // box model
-    height: 100%;
-    flex-basis: auto;
-    flex-grow: 1;
-    flex-shrink: 0;
-    max-width: 416px;
-
-    &:after {
-        content: "";
-        
-        // positioning
-        position: absolute;
-        bottom: -65px;
-        left: 0;
-
+    @include atDesktopM {
         // box model
-        display: block;
-        height: 1px;
-        width: calc(100% + 416px);
+        height: 100%;
+        flex-basis: auto;
+        flex-grow: 1;
+        flex-shrink: 0;
+        max-width: 416px;
 
-        // visual
-        background-color: rgba($grey, 0.5);
+        &:after {
+            content: "";
+            
+            // positioning
+            position: absolute;
+            bottom: -65px;
+            left: 0;
+    
+            // box model
+            display: block;
+            height: 1px;
+            width: calc(100% + 416px);
+    
+            // visual
+            background-color: rgba($grey, 0.5);
+        }
     }
 }
 
@@ -132,15 +210,61 @@
 
 .main-header__descr {
     // box model
-    margin-top: 37px;
+    margin-top: 12px;
     margin-bottom: 33px;
+
+    // typography
+    color: $white;
+
+    @include atDesktopM {
+        // box model
+        margin-top: 37px;
+
+        // typography
+        color: initial;
+    }
 }
 
 .main-header__buttons {
     // box model
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
+    height: 130px;
+
+    @include atDesktopM {
+        // box model
+        align-items: flex-start;
+        flex-direction: row;
+        height: auto;
+    }
+}
+
+.main-header .btn {
+    // typography
+    color: $white;
+
+    // visual
+    border: 1px solid $white;
+
+    @include atDesktopM {
+        // typography
+        color: $grey;
+
+        // visual
+        border: 1px solid $grey;
+    }
+}
+
+.main-header .btn--active {
+    // visual
+    border: 1px solid $red;
+
+    @include atDesktopM {
+        // typography
+        color: $white;
+    }
 }
 
 .main-header__image-small {
@@ -148,11 +272,13 @@
     z-index: 3;
 
     // box model
+    display: none;
     height: 656px;
     width: 416px;
 
     @include atDesktopM {
         // box model
+        display: block;
         margin-top: -62px;
     }
 }
@@ -171,11 +297,13 @@
     z-index: 3;
 
     // box model
+    display: none;
     height: 780px;
     width: 440px;
     
     @include atDesktopM {
         // box model
+        display: block;
         margin-top: -185px;
     }
 
@@ -204,38 +332,13 @@
 
 .main-header__image-big img {
     // box model
-    display: block;
+    display: none;
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
 
-.main-header__contacts {
-    // positioning
-    position: relative;
-
-    // box model
-    width: 100%;
-    max-width: 1400px;
-
-    &:after {
-        content: "";
-
-        // positioning
-        position: absolute;
-        right: calc(-100% + 345px);
-        bottom: -133px;
-        z-index: -1;
-
+    @include atDesktopM {
         // box model
         display: block;
-        width: 960px;
-        height: 295px;
-
-        // visual
-        background-image: url("./img/decor/decorative-brand.svg");
-        background-size: contain;
-        background-position: center center;
-        opacity: 0.8;
     }
 }

@@ -32,30 +32,7 @@ body {
     background-color: $mainColor;
     background-image: url("./img/bg/body-bg.svg");
     background-repeat: repeat;
-}
-
-.main {
-    // box model
-    padding-left: 20px;
-    padding-right: 20px;
-
-    @include atTablet {
-        // box model
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    @include atDesktopS {
-        // box model
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    @include atDesktopM {
-        // box model
-        padding-right: 50px;
-        padding-left: 50px;
-    }
+    overflow: hidden;
 }
 
 *,

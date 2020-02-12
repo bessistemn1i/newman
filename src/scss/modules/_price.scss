@@ -1,9 +1,57 @@
 .price {
+    // positioning
+    position: relative;
+
     // box model
     max-width: 1600px;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 110px;
+    margin-bottom: 5px;
+    padding: 0 30px;
+    padding-bottom: 70px;
+
+    // visual
+    background-image: url("./img/decor/decorative-price-stamp.svg");
+    background-position: -50px 500px;
+    background-size: 620px 620px;
+    background-repeat: no-repeat;
+    
+    &:after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        top: -50px;
+        left: 0px;
+        z-index: -1;
+
+        // box model
+        width: 580px;
+        height: 100%;
+
+        // visual
+        background-image: url("./img/services/shaving-accessories.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 0.1;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-bottom: 110px;
+        padding: 0;
+
+        // visual
+        background-image: none;
+
+        &:after {
+            content: "";
+
+            // box model
+            display: none;
+        }
+    }
 }
 
 .price__content-full {
@@ -27,73 +75,80 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    max-width: 580px;
-    padding-left: 160px;
-    margin-left: -160px;
-    padding-top: 0;
-    padding-bottom: 100px;
-
-    // visual
-    background-image: url("./img/decor/decorative-price-stamp.svg");
-    background-position: -50px 230px;
-    background-size: 620px 620px;
-    background-repeat: no-repeat;
-
-    &:before {
-        content: "Наши услуги и цены";
-
-        // positioning
-        position: absolute;
-        transform: rotate(270deg);
-        bottom: 145px;
-        right: -125px;
-
-        // typography
-        color: rgba($grey, 0.5);
-        font-family: $baseFont;
-        font-size: 10px;
-        font-weight: 600;
-        line-height: 12px;
-        letter-spacing: 4px;
-        text-transform: uppercase;
-    }
-
-    &:after {
-        content: "";
-
-        // positioning
-        position: absolute;
-        top: -50px;
-        left: 0px;
-        z-index: -1;
-
-        // box model
-        width: 580px;
-        height: 100%;
-
-        // visual
-        background-image: url("./img/services/shaving-accessories.jpg");
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        opacity: 0.1;
-    }
+    margin-bottom: 30px;
 
     @include atDesktopM {
         // box model
         min-height: 855px;
+        max-width: 580px;
+        padding-left: 160px;
+        margin-left: -160px;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 100px;
+
+        // visual
+        background-image: url("./img/decor/decorative-price-stamp.svg");
+        background-position: -50px 230px;
+        background-size: 620px 620px;
+        background-repeat: no-repeat;
+
+        &:after {
+            content: "";
+    
+            // positioning
+            position: absolute;
+            top: -50px;
+            left: 0px;
+            z-index: -1;
+    
+            // box model
+            width: 580px;
+            height: 100%;
+    
+            // visual
+            background-image: url("./img/services/shaving-accessories.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            opacity: 0.1;
+        }
+
+        &:before {
+            content: "Наши услуги и цены";
+    
+            // positioning
+            position: absolute;
+            transform: rotate(270deg);
+            bottom: 145px;
+            right: -125px;
+    
+            // typography
+            color: rgba($grey, 0.5);
+            font-family: $baseFont;
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
     }
 }
 
 .price__content-descr {
     // box model
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    max-height: 235px;
-    max-width: 220px;
-    justify-content: flex-start;
-    margin-bottom: 40px;
+    display: none;
+
+    @include atDesktopM {
+        // box model
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        max-height: 235px;
+        max-width: 220px;
+        justify-content: flex-start;
+        margin-bottom: 40px;
+    }
 }
 
 .price__content-descr-header {

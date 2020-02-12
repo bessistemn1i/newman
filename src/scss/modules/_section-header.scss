@@ -64,7 +64,12 @@
 
     &--main-top {
         // typography
-        font-size: 64px;
+        font-size: 40px;
+
+        @include atDesktopM {
+            // typography
+            font-size: 64px;
+        }
     }
 }
 
@@ -76,10 +81,16 @@
     // typography
     color: $black;
     font-family: $titleFont;
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 400;
-    line-height: 54px;
+    line-height: 42px;
     text-transform: uppercase;
+
+    @include atDesktopM {
+        // typography
+        font-size: 48px;
+        line-height: 54px;
+    }
 }
 
 .section-header__descr {

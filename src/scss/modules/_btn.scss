@@ -3,8 +3,8 @@
     display: block;
     width: 100%;
     max-width: 200px;
-    padding-top: 11px;
-    padding-bottom: 11px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 
     // typography
     color: $grey;
@@ -25,6 +25,7 @@
     &--active {
         // typography
         color: $white;
+        font-weight: 600;
         
         // visual
         background-color: $red;
@@ -36,5 +37,11 @@
     &--big {
         // box model
         max-width: 310px;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding-top: 11px;
+        padding-bottom: 11px;
     }
 }
