@@ -84,10 +84,22 @@
     // positioning
     position: absolute;
     bottom: 15px;
-    right: -15px;
+    left: 15px;
+
+    @include atDesktopM {
+        // positioning
+        right: -15px;
+        left: auto;
+    }
 }
 
 .discount-card__buttons .btn--active {
     // box model
-    width: 280px;
+    width: 310px;
+    max-width: 100%;
+
+    @include atDesktopM {
+        // box model
+        max-width: 200px;
+    }
 }

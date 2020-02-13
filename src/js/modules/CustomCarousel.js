@@ -5,7 +5,7 @@ class CustomCarousel {
         return;
       }
   
-      this.VISIBLE_SLIDES = 2;
+      this.VISIBLE_SLIDES = 1;
       this.MAGIC_NUMBER = 360;
       this.currentSlideNum = 0;
   
@@ -23,25 +23,15 @@ class CustomCarousel {
     }
   
     checkSliderOnResize() {
-      if(window.innerWidth >= 1000) {
         this.prepareSlides();
         this.arrangeSlides(this.currentSlideNum);
-        this.slides.forEach((el, idx) => {
-          if(idx == 2) {
-            el.style.opacity = 0.1;
-          }
-        })
-      }
-  
-      if (window.innerWidth < 1000) {
-        this.carouselWrapper.style = '';
-        this.slides.forEach(slide => {
-          slide.style = '';
-          slide.style.left = '';
-          slide.style.opacity = '';
-  
-        })
-      }
+        if(window.innerWidth > 1000) {
+          this.slides.forEach((el, idx) => {
+            if(idx == 2) {
+              el.style.opacity = 0.1;
+            }
+          })
+        }
     }
   
     prepareSlides() {
@@ -59,20 +49,22 @@ class CustomCarousel {
       this.slides.forEach((slide, index) => {
         let position = (slideNum + index) % (this.slides.length);
         slide.style.left = position * this.MAGIC_NUMBER + 'px';
-  
-        if (this.direction > 0 && position > 1) {
+        if(window.innerWidth > 1000) {
+          if (this.direction > 0 && position > 1) {
             slide.style.opacity = '0';
             setTimeout(() => {
                 slide.style.opacity = '0.1';
             }, 150);
-        } else if (this.direction < 0 && position === 0) {
-          slide.style.opacity = '0';
-            setTimeout(() => {
-                slide.style.opacity = '0.1';
-            }, 150);
-        } else {
-          slide.style.opacity = '1';
+          } else if (this.direction < 0 && position === 0) {
+            slide.style.opacity = '0';
+              setTimeout(() => {
+                  slide.style.opacity = '0.1';
+              }, 150);
+          } else {
+            slide.style.opacity = '1';
+          }
         }
+        
         // if (position === 0 || position === this.maxSlideNum ) {
         //   // slide.style.visibility = 'hidden';
         //   slide.style.opacity = '0.5';
@@ -99,6 +91,9 @@ class CustomCarousel {
     }
   
     addEvents() {
+      if(window.innerWidth > 1000) {
+        this.VISIBLE_SLIDES = 2;
+      }
       this.prevButton.addEventListener('click', () => {
         this.setCurrentSlideNum(this.currentSlideNum + 1);
       });

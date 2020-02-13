@@ -2,6 +2,12 @@
     // box model
     width: 100%;
     margin-bottom: 110px;
+    padding: 0 30px;
+
+    @include atDesktopM {
+        // box model
+        padding: 0;
+    }
 }
 
 .discount__content {
@@ -10,7 +16,7 @@
 
     // box model
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     width: 100%;
     max-width: 1753px;
@@ -34,12 +40,23 @@
         background-size: cover;
         background-position: left center;
     }
+
+    @include atDesktopM {
+        // box model
+        flex-direction: row;
+    }
 }
 
 .discount__content .section-header {
     // box model
     max-width: 575px;
-    padding-left: 160px;
+    margin-bottom: 60px;
+
+    @include atDesktopM {
+        // box model
+        margin-bottom: 0;
+        padding-left: 160px;
+    }
 }
 
 .discount__slider {
@@ -48,26 +65,41 @@
 
     // box model
     width: 100%;
-    padding-left: 30px;
 
     // visual
-    overflow: hidden;
+    //overflow: hidden;
     max-width: 1095px;
+
+    @include atDesktopM {
+        // box model
+        padding-left: 30px;
+
+        // visual
+        overflow: hidden;
+    }
 }
 
 .discount__slider-nav {
     // positioning
     position: absolute;
     top: 50%;
-    left: 0;
+    left: -20px;
 
     // box model
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    width: calc(100% + 35px);
     max-width: 725px;
     margin-top: -30px;
+
+    @include atDesktopM {
+        // positioning
+        left: 0;
+
+        // box model
+        width: 100%;
+    }
 }
 
 .discount__slider-btn {
