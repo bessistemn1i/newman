@@ -36,8 +36,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 940px;
-    margin-bottom: calc(100vw + 300px);
+    min-height: 840px;
+    margin-bottom: calc(100vw - 30px);
 
     &:after {
         content: "";
@@ -81,7 +81,8 @@
     }
 
     @include atDesktopS {
-
+        // box model
+        min-height: 940px;
     }
 
     @include atDesktopM {
@@ -115,7 +116,10 @@
 .main-contacts__info {
     // box model
     max-width: 1400px;
-    padding: 0 30px;
+
+    @include atTablet {
+        padding: 0 30px;
+    }
 
     @include atDesktopL {
         // box model

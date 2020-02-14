@@ -146,9 +146,6 @@
     width: 100%;
     max-width: 1520px;
 
-    // visual
-    overflow: hidden;
-
     &:after {
         content: "";
 
@@ -171,6 +168,9 @@
     }
 
     @include atTablet {
+        // visual
+        overflow: hidden;
+
         &:after {
             // positioning
             right: -335px;
