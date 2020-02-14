@@ -13,12 +13,18 @@
     background-repeat: no-repeat;
     background-size: contain;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         padding: 0 calc((100% - 1600px) / 2);
 
         // visual
         background-image: url("./img/decor/decorative-contacts.jpg");
+        background-size: 150%;
+    }
+
+    @include atDesktopS {
+        // visual
+        background-size: contain;
     }
 }
 
@@ -31,7 +37,7 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 940px;
-    margin-bottom: 300px;
+    margin-bottom: calc(100vw + 300px);
 
     &:after {
         content: "";
@@ -39,7 +45,8 @@
         // positioning
         position: absolute;
         left: -50px;
-        bottom: -250px;
+        //bottom: -250px;
+        bottom: calc(-100vw + 90px);
 
         // box model
         display: block;
@@ -53,10 +60,32 @@
         background-repeat: no-repeat;
     }
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         margin-bottom: 0;
         
+        &:after {
+            // positioning
+            top: 0;
+            left: auto;
+            right: -360px;
+
+            // box model
+            height: 100%;
+            max-height: 710px;
+            width: 732px;
+
+            // visual
+            background-size: contain;
+        }
+    }
+
+    @include atDesktopS {
+
+    }
+
+    @include atDesktopM {
+
         &:after {
             // positioning
             right: 0;
@@ -65,25 +94,40 @@
             bottom: auto;
 
             // box model
-            height: 100%;
             max-height: 910px;
-            width: 732px;
-
-            // visual
-            background-size: contain;
         }
+    }
+}
+
+.main-contacts__content .section-header {
+    @include atTablet {
+        // box model
+        padding: 0 30px;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
 .main-contacts__info {
     // box model
     max-width: 1400px;
+    padding: 0 30px;
+
+    @include atDesktopL {
+        // box model
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .main-contacts__slogan {
     // positioning
     position: absolute;
-    bottom: 150px;
+    bottom: calc(-100vw + 490px);
     left: 0;
 
     // box model
@@ -99,11 +143,18 @@
     line-height: 60px;
     text-transform: uppercase;
 
-    @include atDesktopM {
+    @include atTablet {
         // positioning
         bottom: 180px;
 
         // box model
+        padding: 0 30px;
         margin-bottom: 48px;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding-left: 0;
+        padding-right: 0;
     }
 }

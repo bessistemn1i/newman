@@ -13,15 +13,26 @@
     box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
     background-position: center;
 
-    @include atDesktopM {
+    @include atTablet{
         // box model
-        padding-right: 0;
-        padding-left: 0;
+        padding-left: 50px;
         padding-bottom: 0;
 
         // visual
         background: none;
         box-shadow: none;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding-left: 30px;
+        padding-right: 0;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding-right: 0;
+        padding-left: 0;
     }
 }
 
@@ -30,7 +41,7 @@
     // typography
     color: $white;
 
-    @include atDesktopM {
+    @include atTablet {
         // typography
         color: $black;
     }
@@ -49,7 +60,12 @@
     width: 100%;
     max-width: 956px;
     margin-bottom: 35px;
-
+    
+    @include atTablet {
+        // box model
+        margin-bottom: 65px;
+    }
+    
     @include atDesktopM {
         // box model
         margin-bottom: 85px;
@@ -68,7 +84,7 @@
     background-repeat: no-repeat;
     background-position: left;
 
-    @include atDesktopM {
+    @include atTablet{
         // box model
         height: auto;
 
@@ -81,7 +97,7 @@
     // box model
     display: none;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         display: block;
     }
@@ -98,6 +114,10 @@
     cursor: pointer;
 
     @include atDesktopM {
+        right: 100px;
+    }
+
+    @include atDesktopL {
         // positioning
         right: 320px;
     }
@@ -126,6 +146,9 @@
     width: 100%;
     max-width: 1520px;
 
+    // visual
+    overflow: hidden;
+
     &:after {
         content: "";
 
@@ -147,7 +170,22 @@
         mix-blend-mode: overlay;
     }
 
+    @include atTablet {
+        &:after {
+            // positioning
+            right: -335px;
+            bottom: 10px;
+
+            // box model
+            width: 560px;
+            height: 560px;
+        }
+    }
+
     @include atDesktopM {
+        // visual
+        overflow: visible;
+
         &:before {
             content: "";
     
@@ -166,9 +204,13 @@
         }
 
         &:after {
-            // box model
+            // positioning
             right: 75px;
             bottom: -20px;
+
+            // box model
+            width: 800px;
+            height: 800px;
         }
     }
 }
@@ -177,20 +219,20 @@
     // positioning
     position: relative;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         height: 100%;
         flex-basis: auto;
         flex-grow: 1;
         flex-shrink: 0;
-        max-width: 416px;
+        max-width: 300px;
 
         &:after {
             content: "";
             
             // positioning
             position: absolute;
-            bottom: -65px;
+            bottom: -29px;
             left: 0;
     
             // box model
@@ -200,6 +242,18 @@
     
             // visual
             background-color: rgba($grey, 0.5);
+        }
+    }
+
+    @include atDesktopM {
+        // positioning
+        
+        // box model
+        max-width: 416px;
+        
+        &:after {
+            // positioning
+            bottom: -97px;
         }
     }
 }
@@ -216,7 +270,7 @@
     // typography
     color: $white;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         margin-top: 37px;
 
@@ -233,11 +287,16 @@
     justify-content: space-between;
     height: 130px;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         align-items: flex-start;
-        flex-direction: row;
+        flex-direction: column;
+    }
+
+    @include atDesktopM {
+        // box model
         height: auto;
+        flex-direction: row;
     }
 }
 
@@ -248,7 +307,7 @@
     // visual
     border: 1px solid $white;
 
-    @include atDesktopM {
+    @include atTablet {
         // typography
         color: $grey;
 
@@ -261,7 +320,7 @@
     // visual
     border: 1px solid $red;
 
-    @include atDesktopM {
+    @include atTablet {
         // typography
         color: $white;
     }
@@ -276,10 +335,21 @@
     height: 656px;
     width: 416px;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         display: block;
+        margin-top: -45px;
+    }
+
+    @include atDesktopM {
+        // box model
+        width: 335px;
         margin-top: -62px;
+    }
+
+    @include atDesktopL {
+        // box model
+        width: 416px;
     }
 }
 
@@ -304,7 +374,13 @@
     @include atDesktopM {
         // box model
         display: block;
+        width: 335px;
         margin-top: -185px;
+    }
+
+    @include atDesktopL {
+        // box model
+        width: 440px;
     }
 
     &:before {

@@ -15,7 +15,7 @@
     // visual
     list-style: none;
 
-    @include atDesktopM {
+    @include atDesktopL {
         // box model
         display: flex;
     }

@@ -9,9 +9,27 @@
 .features__header {
     // box model
     width: 100%;
-    max-width: 740px;
     margin-left: auto;
     margin-bottom: 50px;
+
+    @include atTablet {
+        // box model
+        max-width: 360px;
+        margin-top: -85px;
+        margin-bottom: 60px;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-top: 0;
+        max-width: 600px;
+        margin-bottom: 50px;
+    }
+
+    @include atDesktopL {
+        // box model
+        max-width: 760px;
+    }
 }
 
 .features__title {
@@ -35,8 +53,27 @@
     // box model
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+
+    @include atTablet {
+        // box model
+        justify-content: space-between;
+        max-width: 800px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include atDesktopS {
+        // box model
+        max-width: 1000px;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 100%;
+    }
 }
 
 .features__item {
@@ -45,7 +82,7 @@
 
     // box model
     width: 100%;
-    max-width: 280px;
+    max-width: 320px;
     margin-bottom: 30px;
 
     // visual
@@ -53,6 +90,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     cursor: initial;
+    
+    @include atTablet {
+        // box model
+        max-width: 280px;
+    }
 
     @include atDesktopM {
         // box model
@@ -103,9 +145,15 @@
         // visual
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url("./img/services/shaving-large.jpg");
 
+        @include atTablet {
+            // box model
+            margin-bottom: 30px;
+        }
+
         @include atDesktopM {
             // box model
             margin-right: 30px;
+            margin-bottom: 0;
 
             // visual
             background: none;

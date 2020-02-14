@@ -65,10 +65,6 @@
         position: fixed;
         transform: translateY(0);
     }
-
-    @include atDesktopM {
-
-    }
 }
 
 .main-nav__mobile-content {
@@ -100,12 +96,15 @@
     max-width: 1065px;
     width: 100%;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
+        margin: 0 50px;
+    }
 
+    @include atDesktopM {
         &:after {
             content: "";
     
@@ -124,6 +123,11 @@
             background-repeat: no-repeat;
             background-position: center center;
         }
+    }
+
+    @include atDesktopL {
+        // box model
+        margin: 0;
     }
 }
 
@@ -157,6 +161,13 @@
     width: 100%;
     order: 2;
 
+    @include atTablet {
+        order: 1;
+
+        // box model
+        max-width: 340px;
+    }
+
     @include atDesktopM {
         order: 1;
 
@@ -176,7 +187,7 @@
     background-repeat: no-repeat;
     background-position: left;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         height: auto;
 
@@ -189,9 +200,14 @@
     // box model
     display: none;
     
-    @include atDesktopM {
+    @include atTablet {
         // box model
         display: block;
+        margin-bottom: 80px;
+    }
+
+    @include atDesktopM {
+        // box model
         margin-bottom: 115px;
     }
 }
@@ -235,7 +251,7 @@
     font-weight: 400;
     line-height: 12px;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         display: block;
     }
@@ -245,7 +261,7 @@
     // typography
     text-align: center;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         margin-bottom: 75px;
 
@@ -282,10 +298,18 @@
     // typography
     text-align: left;
 
+    @include atTablet {
+        order: 2;
+        // box model
+        align-items: flex-start;
+        margin-top: 235px;
+    }
+    
     @include atDesktopM {
         // box model
         align-items: flex-start;
         justify-content: flex-start;
+        margin-top: 0;
         margin-bottom: 0;
     }
 }
@@ -319,9 +343,21 @@
         background-color: rgba($white, 0.5);
     }
 
+    @include atTablet {
+        &:after {
+            // positioning
+            bottom: -15px;
+        }
+    }
+
     @include atDesktopM {
         // box model
         margin-bottom: 115px;
+
+        &:after {
+            // positioning
+            bottom: -85px;
+        }
     }
 }
 
@@ -356,6 +392,11 @@
     &:active {
         // typography
         color: $grey;
+    }
+
+    @include atTablet {
+        // typography
+        text-align: left;
     }
 
     @include atDesktopM {
@@ -400,7 +441,7 @@
     // box model
     display: none;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         display: block;
     }

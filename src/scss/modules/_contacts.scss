@@ -5,9 +5,10 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 
@@ -21,10 +22,25 @@
     width: 100%;
     margin-bottom: 25px;
 
+    @include atTablet {
+        // box model
+        width: 330px;
+
+        &:nth-child(2) {
+            // box model
+            width: 220px;
+        }
+    }
+
     @include atDesktopM {
         // box model
         width: auto;
         margin-bottom: 0;
+
+        &:nth-child(2) {
+            // box model
+            width: auto;
+        }
     }
 }
 
@@ -66,7 +82,7 @@
         background-position: center center;
     }
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         max-width: 175px;
     }
@@ -142,8 +158,13 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    max-width: 412px;
+    width: 100%;
     flex-wrap: wrap;
+
+    @include atTablet {
+        // box model
+        max-width: 412px;
+    }
 }
 
 .contacts__working-hours-header {

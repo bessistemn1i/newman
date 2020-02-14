@@ -6,6 +6,9 @@
     width: 20px;
 
     &--active span {
+        // visual
+        background-color: $white !important;
+
         &:nth-child(1) {
             animation: ease .7s top forwards;
         }
@@ -55,6 +58,11 @@
     // visual
     background-color: $white;
     transition: all 0.3s;
+
+    @include atTablet {
+      // visual
+      background-color: $black;
+    }
 }
 
 .mobile-icon span + span {

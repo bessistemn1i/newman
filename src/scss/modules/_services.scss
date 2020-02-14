@@ -8,7 +8,12 @@
     @include atDesktopM {
         // box model
         margin-bottom: 325px;
-        padding: 0;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -19,21 +24,20 @@
     justify-content: space-between;
     max-width: 1400px;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         flex-direction: row;
+        padding: 0 30px;
+        max-width: 1000px;
+        margin-right: auto;
+        margin-left: auto;
     }
-}
-
-.services__content .section-header {
-    // box model
-    margin-bottom: 25px;
-    padding: 0 30px;
 
     @include atDesktopM {
         // box model
-        margin-bottom: 0;
-        padding: 0;
+        max-width: 1400px;
+        margin-right: 0;
+        margin-left: 0;
     }
 }
 
@@ -43,6 +47,21 @@
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 100%;
+    margin-bottom: 25px;
+    padding: 0 30px;
+
+    @include atTablet {
+        // box model
+        max-width: 270px;
+        padding: 0;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 400px;
+        margin-bottom: 0;
+        padding: 0;
+    }
 }
 
 .services__tabs {
@@ -137,6 +156,16 @@
     flex-grow: 1;
     flex-shrink: 0;
     max-width: 860px;
+
+    @include atTablet {
+        // box model
+        max-width: 340px;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 860px;
+    }
 }
 
 .services__tab {
@@ -145,6 +174,7 @@
     
     // box model
     display: none;
+    height: 100%;
 }
 
 .services__tab-bg {
@@ -157,7 +187,15 @@
     height: 416px;
     width: 100%;
 
+    @include atTablet {
+        // box model
+        height: 100%;
+    }
+
     @include atDesktopM {
+        // box model
+        height: 416px;
+
         &:before {
             content: "";
     
@@ -231,6 +269,11 @@
     // box model
     margin-bottom: 20px;
 
+    @include atTablet {
+        // box model
+        margin-bottom: 30px;
+    }
+    
     @include atDesktopM {
         // box model
         flex-grow: 1;
@@ -273,7 +316,7 @@
     font-weight: 400;
     line-height: 18px;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         margin-bottom: 50px;
     }

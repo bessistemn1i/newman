@@ -13,7 +13,7 @@
     padding-left: 30px;
     padding-right: 30px;
 
-    @include atDesktopM {
+    @include atDesktopL {
         // box model
         padding-left: 0;
         padding-right: 0;
@@ -26,6 +26,12 @@
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
+
+    @include atTablet {
+        // box model
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 .main-footer__content {
@@ -41,9 +47,16 @@
     // typography
     text-align: center;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    @include atDesktopS {
+        // box model
         align-items: flex-start;
 
         // typography
@@ -60,16 +73,27 @@
     justify-content: space-between;
     width: 100%;
     max-width: 630px;
+    
+    @include atTablet {
+        // box model
+        max-width: 255px;
+    }
 
-    @include atDesktopM {
+    @include atDesktopS {
         // box model
         flex-direction: row;
+        max-width: 630px;
     }
 }
 
 .main-footer__info {
     // box model
     margin-bottom: 50px;
+
+    @include atTablet {
+        // box model
+        max-width: 225px;
+    }
 
     @include atDesktopM {
         // box model
@@ -90,9 +114,16 @@
     width: 100%;
     margin-bottom: 40px;
 
+    @include atTablet {
+        // box model
+        flex-basis: auto;
+        width: auto;
+        margin-bottom: 35px;
+    }
+
     @include atDesktopM {
         // box model
-        width: auto;
+        flex-basis: 230px;
         margin-bottom: 0;
     }
 }
@@ -113,6 +144,11 @@
 .main-footer__menu-header {
     // box model
     margin-bottom: 16px;
+
+    @include atTablet {
+        // typography
+        text-align: left;
+    }
 }
 
 .main-footer__menu-title {
@@ -133,7 +169,7 @@
     // visual
     list-style: none;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         display: block;
         columns: 2;
@@ -175,13 +211,14 @@
         color: $grey;
     }
 
-    @include atDesktopM {
+    @include atTablet {
         // typography
         font-size: 12px;
         font-weight: 400;
         line-height: 18px;
         text-transform: capitalize;
         letter-spacing: normal;
+        text-align: left;
     }
 }
 
@@ -200,6 +237,11 @@
     // visual
     list-style: none;
 
+    @include atTablet {
+        // box model
+        align-items: flex-start;
+    }
+
     @include atDesktopM {
         // box model
         flex-direction: row;
@@ -211,6 +253,11 @@
 .main__footer-social-header {
     // box model
     margin-bottom: 15px;
+
+    @include atTablet {
+        // typography
+        text-align: left;
+    }
 }
 
 .main__footer-social-title {
@@ -261,9 +308,13 @@
         background-color: rgba($grey, 0.5);
     }
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         align-items: flex-start;
+    }
+
+    @include atDesktopM {
+        // box model
         justify-content: flex-start;
     }
 }
@@ -289,6 +340,7 @@
 .main-footer__policy-bottom-text {
     // box model
     margin: 0;
+    width: 100%;
 
     // typography
     color: $grey;
@@ -296,4 +348,5 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
+    text-align: left;
 }

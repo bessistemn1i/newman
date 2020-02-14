@@ -12,7 +12,6 @@
     @include atDesktopM {
         // box model
         margin-bottom: 120px;
-        padding: 0;
 
         &:after {
             content: "";
@@ -34,6 +33,12 @@
             background-repeat: no-repeat;
         }
     }
+
+    @include atDesktopL {
+        // box model
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .team .section-header {
@@ -42,13 +47,15 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    max-width: 950px;
+    max-width: 1000px;
     margin-bottom: 45px;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
         flex-direction: row;
+    }
 
+    @include atDesktopM {
         &:after {
             content: "";
     
@@ -91,6 +98,23 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include atTablet {
+        // box model
+        max-width: 820px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include atDesktopS {
+        // box model
+        max-width: 1000px;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 100%;
+    }
 }
 
 .team__list-barber {
@@ -99,6 +123,11 @@
     height: 415px;
     margin-bottom: 65px;
 
+    @include atTablet {
+        // box model
+        max-width: 280px;
+    }
+    
     @include atDesktopM {
         // box model
         max-width: 308px;

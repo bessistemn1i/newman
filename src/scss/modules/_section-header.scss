@@ -18,6 +18,18 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
+
+    @include atTablet {
+        // typography
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @include atDesktopM {
+        // typography
+        font-size: 24px;
+        line-height: 30px;
+    }
 }
 
 .section-header--right-subtitle {
@@ -70,6 +82,16 @@
             // typography
             font-size: 64px;
         }
+    }
+
+    @include atTablet {
+        // typography
+        font-size: 40px;
+    }
+
+    @include atDesktopM {
+        // typography
+        font-size: 48px;
     }
 }
 

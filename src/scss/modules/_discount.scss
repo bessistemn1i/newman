@@ -21,29 +21,29 @@
     width: 100%;
     max-width: 1753px;
 
-    &:after {
-        content: "";
-
-        // positioning
-        position: absolute;
-        left: 285px;
-        top: 370px;
-        z-index: -1;
-
-        // box model
-        height: 300px;
-        width: 100%;
-
-        // visual
-        background-image: url("./img/decor/decorative-discount.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: left center;
-    }
-
     @include atDesktopM {
         // box model
         flex-direction: row;
+
+        &:after {
+            content: "";
+    
+            // positioning
+            position: absolute;
+            left: 285px;
+            top: 370px;
+            z-index: -1;
+    
+            // box model
+            height: 300px;
+            width: 100%;
+    
+            // visual
+            background-image: url("./img/decor/decorative-discount.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+        }
     }
 }
 
