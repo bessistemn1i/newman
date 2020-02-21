@@ -1,0 +1,129 @@
+.mobile-app {
+    // box model
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 80px;
+    padding: 0 30px;
+
+    // visual
+    background-color: #ffffff;
+
+    @include atDesktopM {
+        // box model
+        margin-bottom: 140px;
+    }
+
+    @include atDesktopL {
+        padding: 0 calc((100% - 1600px) / 2);
+    }
+}
+
+.mobile-app__content {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    padding: 30px;
+
+    // visual
+    background-image: url("./img/bg/mobile-app-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 20px 24px rgba(0, 0, 0, 0.25);
+
+    @include atTablet {
+        // box model
+        padding: 30px 60px;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding: 50px 110px;
+    }
+}
+
+.mobile-app__content .section-header {
+    // box model
+    margin-bottom: 25px;
+
+    @include atTablet {
+        // box model
+        max-width: 310px;
+    }
+}
+
+.mobile-app__content .section-header__title,
+.mobile-app__content .section-header__subtitle {
+    // typography
+    color: $white;
+}
+
+.mobile-app__content .section-header__title {
+    // typography
+    font-size: 36px;
+
+    @include atTablet {
+        // typography
+        font-size: 48px;
+    }
+}
+
+.mobile-app__content .section-header__subtitle {
+    // typography
+    font-size: 24px;
+    line-height: 30px;
+    
+    @include atTablet {
+        // typography
+        font-size: 40px;
+        line-height: 42px;
+    }
+}
+
+.mobile-app__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 120px;
+
+    @include atTablet {
+        // box model
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 415px;
+        height: auto;
+    }
+}
+
+.mobile-app__btn {
+    display: block;
+    width: 200px;
+    height: 50px;
+    padding: 10px 35px;
+    
+    // visual
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 1px solid #898989;
+    transition: border 0.25s ease;
+
+    &--google-play {
+        background-image: url("./img/icons/google-play.svg");
+    }
+
+    &--app-store {
+        background-image: url("./img/icons/app-store.svg");
+    }
+
+    &:hover {
+        border: 1px solid $white;
+    }
+}
