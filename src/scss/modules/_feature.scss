@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 418px;
+    min-height: 460px;
     padding-top: 80px;
 }
 
@@ -36,14 +36,11 @@
     &:after {
         content: "";
 
-        // positioning
-        position: absolute;
-        bottom: -22px;
-
         // box model
         display: block;
         height: 1px;
         width: 221px;
+        margin-top: 25px;
 
         // visual
         background-color: $grey;
@@ -53,6 +50,7 @@
 
 .feature__descr {
     // box model
+    margin-bottom: 60px;
     padding: 0 30px;
 }
 
