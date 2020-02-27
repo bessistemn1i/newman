@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Newman barbershop
+        link(rel="stylesheet", href="styles.css")
+        link(rel="stylesheet", href="404.css")
+        noscript
+            link(rel="stylesheet", href="styles.css")
+    body
+        header.main-header
+            .main-header__top-navigation
+                .main-header__logo
+                    img.logo(src="./img/logo/newman-logo-white.svg", alt="NEWMAN BARBERSHOP")
+            
+                .main-header__nav
+                    nav.main-nav
+                        ul.main-nav__list
+                            li.main-nav__item
+                                a.main-nav__link.smooth-trigger(href="#price") Прайс
+                            li.main-nav__item
+                                a.main-nav__link.smooth-trigger(href="#services") Услуги
+                            li.main-nav__item
+                                a.main-nav__link.smooth-trigger(href="#contacts") Контакты
+                        
+            .main-nav__mobile
+                .main-nav__mobile-content
+                    header.main-nav__top-header
+                        .main-nav__top-logo
+                            img.logo(src="./img/logo/newman-logo-white.svg", alt="Newman Barbershop")
+                    .main-nav__main-content
+                        .main-nav__mobile-info
+                            header.main-nav__mobile-header
+                                h3.main-nav__mobile-title Меню
+                                p.main-nav__mobile-subtitle Барбершоп для настоящих ценителей современного мужского стиля
+                            .main-nav__mobile-address
+                                .main-nav__mobile-adress-content
+                                    h5.main-nav__mobile-small-title Адрес
+                                    p.main-nav__mobile-subtitle +7 (913) 492-38-14<br>Норильск<br> Ленинский проспект, 39д<br> ТЦ “Салют"
+                                .main-nav__mobile-hours
+                                    h5.main-nav__mobile-small-title Режим работы
+                                    p.main-nav__mobile-subtitle Понедельник - Пятница:<br>09.00 - 20.00
+                                    p.main-nav__mobile-subtitle Суббота - Воскресенье:<br>10.00 - 22.00
+                        .main-nav__mobile-menu
+                            ul.main-nav__mobile-list
+                                li.main-nav__mobile-item
+                                    a.main-nav__mobile-link.smooth-trigger(href="#about") О барбершопе
+                                li.main-nav__mobile-item
+                                    a.main-nav__mobile-link.smooth-trigger(href="#features") Преимущества
+                                li.main-nav__mobile-item
+                                    a.main-nav__mobile-link.smooth-trigger(href="#price") Прайс
+                                li.main-nav__mobile-item
+                                    a.main-nav__mobile-link.smooth-trigger(href="#services") Услуги
+                                li.main-nav__mobile-item
+                                    a.main-nav__mobile-link.smooth-trigger(href="#team") Команда
+                                li.main-nav__mobile-item
+                                    a.main-nav__mobile-link.smooth-trigger(href="#contacts") Контакты
+                            .main-nav__mobile-menu-policy
+                                a.main-nav__mobile-menu-policy-link(href="#") Условия использования
+                                a.main-nav__mobile-menu-policy-link(href="#") Политика безопасности
+            .main-header__mobile-icon
+                .mobile-icon.mobile-icon--inactive
+                    span
+                    span
+                    span
+
+        main.main
+            
+            section.page-404
+                header.page-404__header
+                    h1.page-404__title 404
+                    h2.page-404__subtitle Страница не найдена
+                    p.page-404__descr sorry you are lost
+                
+                .page-404__motto
+                    q.page-404__motto-text “Now, therefore, thus says the LORD of hosts: Consider your ways”
+                    cite Haggai 1:5
+
+        footer.main-footer
+            .main-footer__content
+                .main-footer__info
+                    .main-footer__info-logo
+                        img.logo(src="./img/logo/newman-logo-white.svg", alt="NEWMAN BARBERSHOP")
+                    p.bold-font Барбершоп для настоящих ценителей современного мужского стиля
+                .main-footer__menu-and-social
+                    .main-footer__menu
+                        .main-footer__menu-header
+                            h4.main-footer__menu-title.ghost-font.ghost-font--red Меню
+                        ul.main-footer__menu-list
+                            li.main-footer__menu-item
+                                a.main-footer__menu-link(href="#about") О барбершопе
+                            li.main-footer__menu-item
+                                a.main-footer__menu-link(href="#features") Преимущества
+                            li.main-footer__menu-item
+                                a.main-footer__menu-link(href="#price") Прайс
+                            li.main-footer__menu-item
+                                a.main-footer__menu-link(href="#services") Услуги
+                            li.main-footer__menu-item
+                                a.main-footer__menu-link(href="#team") Команда
+                            li.main-footer__menu-item
+                                a.main-footer__menu-link(href="#contacts") Контакты
+                    .main-footer__social
+                        .main__footer-social-header
+                            h4.main__footer-social-title.ghost-font.ghost-font--red Мы в социальных сетях
+                        ul.main__footer-social-list
+                            li.main__footer-social-item
+                                a.main__footer-social-link.ghost-font(href="https://www.instagram.com/new_man_barbershop" target="_blank") instagram
+                            li.main__footer-social-item
+                                a.main__footer-social-link.ghost-font(href="#") vkontakte
+
+                        .main__footer-policy
+                            a.main__footer-policy-link(href="#") Условия использования
+                            a.main__footer-policy-link(href="#") Политика безопасности
+
+                p.main-footer__policy-bottom-text &copy; NEWMAN 2020 Все права защищены
+
+        script(src="main.js")

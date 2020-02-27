@@ -28,7 +28,8 @@ const dirs = {
 // Webpack config
 const webpackConfig = {
   entry: {
-    main: './src/js/scripts.js'
+    main: './src/js/scripts.js',
+    404: './src/js/404.js'
   },
 
   output: {

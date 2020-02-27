@@ -1,0 +1,26 @@
+body {
+    // box model
+    height: 100vh;
+    max-height: 1080px;
+    
+    // visual
+    background-image: url("./img/bg/team-bg-hd.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.main-nav__link,
+.main-footer__menu-link,
+.main__footer-social-link,
+.main__footer-policy-link,
+.bold-font,
+.main-footer__policy-bottom-text {
+    // typography
+    color: #ffffff;
+}
+
+.mobile-icon span {
+    background-color: #ffffff;
+}
+
