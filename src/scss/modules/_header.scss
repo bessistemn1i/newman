@@ -103,6 +103,11 @@
     }
 }
 
+.main-header__link {
+    // box model
+    display: block;
+}
+
 .main-header__mobile-icon {
     // positioning
     position: fixed;
